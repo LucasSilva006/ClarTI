@@ -239,7 +239,7 @@ nav.mostrar {
 .bullet2,
 .bullet3 {
   text-align: center;
-  max-width: 60%;
+  max-width: 80%;
 }
 
 .desc-bullet1,
@@ -249,15 +249,13 @@ nav.mostrar {
 }
 
 .bullets-dores img {
-  max-width: 60px;
+  max-width: 80px;
   border-radius: 100%;
   background-color: var(--cor-primaria-900);
   padding: 4px;
 }
 
-
-/**/
-
+/* SOLUÇÃO CLARTI */
 
 
 
