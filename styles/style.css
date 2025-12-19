@@ -214,16 +214,20 @@ nav.mostrar {
 }
 
 .tit-problema {
-  font-weight: 500;
+  color: var(--cor-primaria-700);
+  font-size: var(--fonte-grande);
+  font-weight: 700;
 }
 
 .destaque-tit-problema {
+  color: var(--cor-primaria-900);
+  font-size: var(--fonte-muito-grande);
   font-weight: 900;
 }
 
 .text-problema {
   margin-top: 16px;
-  font-size: var(--fonte-pequena);
+  font-size: var(--fonte-media);
 }
 
 .bullets-dores {
