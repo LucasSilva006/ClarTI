@@ -260,6 +260,122 @@ nav.mostrar {
 
 /* SOLUÇÃO CLARTI */
 
+.custom-shape-divider-top-1766184094 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1766184094 svg {
+  position: relative;
+  display: block;
+  width: calc(144% + 1.3px);
+  height: 46px;
+}
+
+.custom-shape-divider-top-1766184094 .shape-fill {
+  fill: #f0fcff;
+}
+
+.solucao {
+  background-color: var(--cor-primaria-700);
+  color: var(--cor-clara-100);
+  padding-bottom: 32px;
+}
+
+.box-titulos-solucao {
+  padding: 24px 16px;
+}
+
+.tit-solucao {
+  font-size: var(--fonte-muito-grande);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.box-solucoes {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+}
+
+.card-diferenciais {
+  color: var(--cor-primaria-900);
+  background-color: var(--cor-clara-100);
+  margin: 0 16px;
+  padding: 32px 8px;
+  border-radius: 8px;
+}
+
+/* SERVICOS */
+
+.servicos {
+  padding: 32px 16px;
+}
+
+.box-titulos-servicos {
+  text-align: center;
+}
+
+.tit-servicos {
+  font-size: var(--fonte-muito-grande);
+}
+
+.subtit-servicos {
+  text-align: start;
+  margin-top: 16px;
+}
+
+.box-dos-servicos {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.card-servicos {
+  background-color: var(--cor-primaria-900);
+  color: var(--cor-clara-100);
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.tit-card-servico {
+  margin-bottom: 8px;
+}
+
+/* PORTFOLIO */
+
+.portfolio {
+  background-image: linear-gradient(to bottom, #3d7fab, #001a2c);
+  padding: 32px 16px;
+  color: var(--cor-clara-100);
+}
+
+.tit-portfolio {
+  font-size: var(--fonte-muito-grande);
+}
+
+.subtit-portfolio {
+  margin-top: 16px;
+}
+
+.box-portfolio {
+  background-color: var(--cor-clara-100);
+  color: var(--cor-primaria-900);
+  padding: 32px 16px;
+  margin: 24px auto 8px;
+  border-radius: 8px;
+  max-width: 75%;
+  text-align: center;
+}
+
+/* PRECOS */
+
 
 
 /* RESPONSIVIDADE 768PX */
