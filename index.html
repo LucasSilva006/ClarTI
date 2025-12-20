@@ -119,17 +119,17 @@
       </div>
 
       <div class="box-solucoes">
-        <div class="card-diferenciais">
-          <h3 class="tit-diferenciais">Sites rápidos e objetivos</h3>
+        <div class="card-solucoes">
+          <h3 class="tit-solucoes">Sites rápidos e objetivos</h3>
         </div>
-        <div class="card-diferenciais">
-          <h3 class="tit-diferenciais">Linguagem simples e transparente</h3>
+        <div class="card-solucoes">
+          <h3 class="tit-solucoes">Linguagem simples e transparente</h3>
         </div>
-        <div class="card-diferenciais">
-          <h3 class="tit-diferenciais">Parceria humana e próxima</h3>
+        <div class="card-solucoes">
+          <h3 class="tit-solucoes">Parceria humana e próxima</h3>
         </div>
-        <div class="card-diferenciais">
-          <h3 class="tit-diferenciais">Preço justo e acessível</h3>
+        <div class="card-solucoes">
+          <h3 class="tit-solucoes">Preço justo e acessível</h3>
         </div>
       </div>
     </section>
@@ -191,10 +191,74 @@
         </p>
       </div>
 
-      <div class="box-portfolio">
-        <img src="#" alt="Imagem do site do cliente" />
-        <h3 class="tit-card-portfolio">Erondi Corretor</h3>
-        <p class="subtit-card-portfolio">Página de vendas</p>
+      <div class="carousel-wrapper">
+        <div class="carousel-container">
+          <button class="carousel-btn btn-prev" onclick="prevSlide()">
+            <img
+              src="imagens/elements/icons/seta-esquerda-escura.svg"
+              alt="Voltar"
+            />
+          </button>
+          <button class="carousel-btn btn-next" onclick="nextSlide()">
+            <img
+              src="imagens/elements/icons/seta-direita-escura.svg"
+              alt="Próximo"
+            />
+          </button>
+
+          <div class="carousel-track" id="carouselTrack">
+            <div class="box-portfolio">
+              <img
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400"
+                alt="Imagem do site do cliente"
+              />
+              <h3 class="tit-card-portfolio">Erondi Corretor</h3>
+              <p class="subtit-card-portfolio">Página de vendas</p>
+            </div>
+            <div class="box-portfolio">
+              <img
+                src="https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?w=400"
+                alt="Imagem do site do cliente"
+              />
+              <h3 class="tit-card-portfolio">Tech Solutions</h3>
+              <p class="subtit-card-portfolio">Site institucional</p>
+            </div>
+            <div class="box-portfolio">
+              <img
+                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400"
+                alt="Imagem do site do cliente"
+              />
+              <h3 class="tit-card-portfolio">Digital Marketing</h3>
+              <p class="subtit-card-portfolio">Landing page</p>
+            </div>
+            <div class="box-portfolio">
+              <img
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400"
+                alt="Imagem do site do cliente"
+              />
+              <h3 class="tit-card-portfolio">E-commerce Plus</h3>
+              <p class="subtit-card-portfolio">Loja virtual</p>
+            </div>
+            <div class="box-portfolio">
+              <img
+                src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=400"
+                alt="Imagem do site do cliente"
+              />
+              <h3 class="tit-card-portfolio">Creative Studio</h3>
+              <p class="subtit-card-portfolio">Portfolio</p>
+            </div>
+            <div class="box-portfolio">
+              <img
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400"
+                alt="Imagem do site do cliente"
+              />
+              <h3 class="tit-card-portfolio">Business Pro</h3>
+              <p class="subtit-card-portfolio">Sistema web</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-indicators" id="indicators"></div>
       </div>
     </section>
 
@@ -289,7 +353,11 @@
 
     <footer>
       <div class="coluna-logo-footer">
-        <img src="imagens/logos/imagotipo2.webp" alt="Logo ClarTI" class="logo-final"/>
+        <img
+          src="imagens/logos/imagotipo2.webp"
+          alt="Logo ClarTI"
+          class="logo-final"
+        />
         <h3 class="tit-footer">Tecnologia com Clareza</h3>
       </div>
       <div class="colunas-footer">

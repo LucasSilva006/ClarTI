@@ -34,6 +34,7 @@ body {
   color: var(--cor-primaria-900);
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 h2 {
@@ -147,6 +148,8 @@ nav.mostrar {
 
 .botoes-hero-section {
   display: flex;
+  flex-direction: column;
+  text-align: start;
 }
 
 .cta-hero-section {
@@ -154,19 +157,17 @@ nav.mostrar {
   flex-direction: row;
   background-color: var(--cor-clara-100);
   color: var(--cor-primaria-900);
-  width: 200px;
   max-width: 250px;
   margin: 42px 4px 0px 16px;
   padding: 8px 12px;
   border-radius: 4px;
   font-size: var(--fonte-pequena);
   font-weight: bold;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
 .cta-hero-section img {
-  margin: 0px 0px 0px 4px;
   width: 28px;
 }
 
@@ -175,17 +176,16 @@ nav.mostrar {
   flex-direction: row;
   background-color: transparent;
   color: var(--cor-clara-100);
-  width: 36vw;
-  max-width: 170px;
-  margin: 42px 16px 0px 16px;
-  padding: 8px 16px;
+  max-width: 122px;
+  margin: 8px 16px 0px 16px;
+  padding: 12px 24px;
   border: solid 1px var(--cor-clara-100);
   border-radius: 4px;
   font-size: var(--fonte-pequena);
-  text-align: center;
+  text-align: start;
   font-weight: bold;
-  justify-content: center;
-  align-items: center;
+  justify-content: start;
+  align-items: start;
 }
 
 .div-img-hero {
@@ -299,8 +299,12 @@ nav.mostrar {
   color: var(--cor-primaria-900);
   background-color: var(--cor-clara-100);
   margin: 0 16px;
-  padding: 32px 8px;
+  padding: 24px 16px;
   border-radius: 8px;
+}
+
+.tit-diferenciais {
+  font-size: var(--fonte-muito-grande);
 }
 
 /* SERVICOS */
@@ -362,8 +366,123 @@ nav.mostrar {
   padding: 32px 16px;
   margin: 24px auto 8px;
   border-radius: 8px;
-  max-width: 75%;
+  max-width: 100%;
   text-align: center;
+  /* Propriedades do carrossel */
+  min-width: calc(33.333% - 16px);
+  flex-shrink: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.box-portfolio:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.box-portfolio img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.tit-card-portfolio {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.subtit-card-portfolio {
+  font-size: var(--fonte-pequena);
+  color: #666;
+  font-weight: 400;
+}
+
+/* CARROSSEL */
+
+.carousel-wrapper {
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+}
+
+.carousel-container {
+  overflow: hidden;
+  position: relative;
+  padding: 0 60px;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 24px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background: white;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.carousel-btn img {
+  width: 30px;
+  height: 30px;
+}
+
+.btn-prev {
+  left: 5px;
+}
+
+.btn-next {
+  right: 5px;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background: white;
+  width: 32px;
+  border-radius: 6px;
 }
 
 /* PRECOS */
@@ -415,8 +534,7 @@ nav.mostrar {
   flex-wrap: wrap;
   gap: 16px;
   margin-top: 16px;
-    justify-content: space-around;
-
+  justify-content: space-around;
 }
 
 .tit-bullet-diferenciais {
@@ -436,7 +554,6 @@ nav.mostrar {
   margin-top: 32px;
 }
 
-
 /* CTA FINAL */
 
 .cta-final {
@@ -445,7 +562,7 @@ nav.mostrar {
 }
 
 .tit-cta-final {
-  font-size: var(--fonte-grande)
+  font-size: var(--fonte-grande);
 }
 
 .subtit-cta-final {
@@ -464,7 +581,7 @@ nav.mostrar {
 /* FOOTER */
 
 footer {
-  background-color: #000D16;
+  background-color: #000d16;
   padding: 16px 16px;
   color: var(--cor-clara-50);
   text-align: center;
