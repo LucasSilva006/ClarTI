@@ -64,6 +64,9 @@ header {
   padding: 10px 16px;
   background-color: var(--cor-primaria-900);
   color: var(--cor-clara-50);
+  top: -1px;
+  z-index: 1000;
+  position: sticky;
 }
 
 .logo-header {
@@ -102,7 +105,7 @@ nav {
 
 nav.mostrar {
   display: block;
-  background-color: var(--cor-primaria-900);
+  background-color: var(--cor-primaria-700);
   padding: 4px 16px;
   position: absolute;
   top: 50px;
@@ -111,6 +114,7 @@ nav.mostrar {
 
 .item-li {
   color: var(--cor-clara-100);
+  padding: 0 16px;
 }
 
 .li-contato {
@@ -119,8 +123,12 @@ nav.mostrar {
 
 .li-precos,
 .li-projetos,
-.li-servicos {
+.li-contato {
   border-top: solid 1px rgba(255, 255, 255, 0.123);
+  padding: 12px 0;
+}
+
+.li-servicos {
   padding: 12px 0;
 }
 
@@ -202,18 +210,18 @@ nav.mostrar {
 /*PROBLEMA DOR*/
 
 .problema {
-  padding: 24px 16px;
+  padding: 40px 16px;
 }
 
 .tit-problema {
   color: var(--cor-primaria-700);
-  font-size: var(--fonte-grande);
+  font-size: 1.4em;
   font-weight: 700;
 }
 
 .destaque-tit-problema {
   color: var(--cor-primaria-900);
-  font-size: var(--fonte-muito-grande);
+  font-size: 1.8em;
   font-weight: 900;
 }
 
@@ -226,7 +234,6 @@ nav.mostrar {
   display: flex;
   margin: 24px auto;
   gap: 16px;
-  align-items: center;
   justify-content: center;
 }
 
@@ -275,11 +282,11 @@ nav.mostrar {
 .solucao {
   background-color: var(--cor-primaria-700);
   color: var(--cor-clara-100);
-  padding-bottom: 32px;
+  padding-bottom: 40px;
 }
 
 .box-titulos-solucao {
-  padding: 24px 16px;
+  padding: 32px 16px;
 }
 
 .tit-solucao {
@@ -298,9 +305,11 @@ nav.mostrar {
 .card-solucoes {
   color: var(--cor-primaria-900);
   background-color: var(--cor-clara-100);
-  margin: 0 16px;
   padding: 24px 16px;
   border-radius: 8px;
+  width: 70%;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .tit-solucoes {
@@ -310,7 +319,8 @@ nav.mostrar {
 /* SERVICOS */
 
 .servicos {
-  padding: 32px 16px;
+  padding: 40px 16px;
+  scroll-margin-top: 60px;
 }
 
 .box-titulos-servicos {
@@ -338,18 +348,28 @@ nav.mostrar {
   color: var(--cor-clara-100);
   padding: 24px 16px;
   border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .tit-card-servico {
   margin-bottom: 8px;
 }
 
+.icon-do-servico {
+  width: 50px;
+  height: 50px;
+}
+
 /* PORTFOLIO */
 
 .portfolio {
   background-image: linear-gradient(to bottom, #3d7fab, #001a2c);
-  padding: 32px 16px;
+  padding: 40px 16px;
   color: var(--cor-clara-100);
+  scroll-margin-top: 60px;
 }
 
 .tit-portfolio {
@@ -487,11 +507,12 @@ nav.mostrar {
 
 /* PREÇOS */
 .precos {
-  padding: 32px 16px;
+  padding: 40px 16px;
   text-align: center;
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+  scroll-margin-top: 60px;
 }
 
 .tit-precos {
@@ -660,7 +681,7 @@ nav.mostrar {
 /* DIFERENCIAIS */
 
 .diferenciais {
-  padding: 32px 16px;
+  padding: 40px 16px;
   background-image: linear-gradient(to bottom, #3d7fab, #001a2c);
   color: var(--cor-clara-100);
   text-align: center;
@@ -701,7 +722,7 @@ nav.mostrar {
 /* CTA FINAL */
 
 .cta-final {
-  padding: 32px 16px;
+  padding: 40px 16px;
   text-align: center;
 }
 
@@ -718,15 +739,23 @@ nav.mostrar {
   background-color: var(--cor-primaria-700);
   color: var(--cor-clara-50);
   padding: 16px 16px;
-  margin-top: 16px;
   border-radius: 8px;
+  margin: 24px auto 0;
+  width: 80%;
+  max-width: 500px;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+.link-cta-final:hover {
+  background-color: var(--cor-primaria-900);
+  transform: scale(1.05);
 }
 
 /* FOOTER */
 
 footer {
   background-color: #000d16;
-  padding: 16px 16px;
+  padding: 24px 16px;
   color: var(--cor-clara-50);
   text-align: center;
 }
@@ -800,7 +829,8 @@ footer {
 
   .li-precos,
   .li-projetos,
-  .li-servicos {
+  .li-servicos,
+  .li-contato {
     border-top: none;
     padding: 12px 0;
   }
