@@ -139,7 +139,13 @@ nav.mostrar {
 /* HERO SECTION */
 
 .hero-section {
-  background: linear-gradient(to bottom, var(--cor-primaria-700), #000000);
+  background-image: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(0, 0, 0, 0.5) 1000%
+    ),
+    url("../imagens/elements/mesh-gradient.png");
+  background-size: cover;
   color: var(--cor-clara-50);
 }
 
@@ -280,7 +286,7 @@ nav.mostrar {
 }
 
 .solucao {
-  background-color: var(--cor-primaria-700);
+  background: linear-gradient(120deg, #1b6fa1, #000f1b);
   color: var(--cor-clara-100);
   padding-bottom: 40px;
 }
@@ -344,7 +350,7 @@ nav.mostrar {
 }
 
 .card-servicos {
-  background-color: var(--cor-primaria-900);
+  background: linear-gradient(125deg, #12517e, #001a2c);
   color: var(--cor-clara-100);
   padding: 24px 16px;
   border-radius: 8px;
@@ -523,7 +529,7 @@ nav.mostrar {
 
 /* CARDS DE PREÇOS */
 .card-precos {
-  background-color: var(--cor-primaria-900);
+  background: linear-gradient(125deg, #12517e, #001a2c);
   padding: 32px 24px;
   margin: 24px auto 8px;
   border-radius: 12px;
@@ -682,7 +688,7 @@ nav.mostrar {
 
 .diferenciais {
   padding: 40px 16px;
-  background-image: linear-gradient(to bottom, #3d7fab, #001a2c);
+  background-image: linear-gradient(125deg, #3d7fab, #001a2c);
   color: var(--cor-clara-100);
   text-align: center;
 }
@@ -736,25 +742,43 @@ nav.mostrar {
 
 .link-cta-final {
   display: block;
-  background-color: var(--cor-primaria-700);
+  background: linear-gradient(125deg, #12517e, #001a2c);
   color: var(--cor-clara-50);
   padding: 16px 16px;
   border-radius: 8px;
   margin: 24px auto 0;
   width: 80%;
   max-width: 500px;
-  transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.link-cta-final::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(125deg, #03131f, #001a2c);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+}
+
+.link-cta-final:hover::before {
+  opacity: 1;
 }
 
 .link-cta-final:hover {
-  background-color: var(--cor-primaria-900);
   transform: scale(1.05);
 }
 
 /* FOOTER */
 
 footer {
-  background-color: #000d16;
+  background: linear-gradient(to bottom, #06243b, #000000);
   padding: 24px 16px;
   color: var(--cor-clara-50);
   text-align: center;
