@@ -78,3 +78,79 @@ function goToSlide(index) {
 window.addEventListener("resize", updateCardsPerView);
 
 updateCardsPerView();
+
+
+
+
+const trackPrecos = document.getElementById("carouselTrackPrecos");
+const indicatorsContainerPrecos = document.getElementById("indicatorsPrecos");
+const cardsPrecos = document.querySelectorAll(".card-precos");
+const totalCardsPrecos = cardsPrecos.length;
+let currentIndexPrecos = 0;
+let cardsPerViewPrecos = 3;
+
+function updateCardsPerViewPrecos() {
+  if (window.innerWidth <= 768) {
+    cardsPerViewPrecos = 1;
+  } else if (window.innerWidth <= 1024) {
+    cardsPerViewPrecos = 2;
+  } else {
+    cardsPerViewPrecos = 3;
+  }
+  updateCarouselPrecos();
+  createIndicatorsPrecos();
+}
+
+function createIndicatorsPrecos() {
+  indicatorsContainerPrecos.innerHTML = "";
+  const totalSlidesPrecos = totalCardsPrecos;
+  
+  for (let i = 0; i < totalSlidesPrecos; i++) {
+    const indicator = document.createElement("button");
+    indicator.classList.add("indicator-precos");
+    if (i === currentIndexPrecos) {
+      indicator.classList.add("active");
+    }
+    indicator.onclick = () => goToSlidePrecos(i);
+    indicatorsContainerPrecos.appendChild(indicator);
+  }
+}
+
+function updateCarouselPrecos() {
+  const cardWidth = cardsPrecos[0].offsetWidth;
+  const gap = 24;
+  const offset = -(currentIndexPrecos * (cardWidth + gap));
+  trackPrecos.style.transform = `translateX(${offset}px)`;
+  updateIndicatorsPrecos();
+}
+
+function updateIndicatorsPrecos() {
+  const indicators = document.querySelectorAll(".indicator-precos");
+  indicators.forEach((indicator, index) => {
+    indicator.classList.toggle("active", index === currentIndexPrecos);
+  });
+}
+
+function nextSlidePrecos() {
+  currentIndexPrecos++;
+  if (currentIndexPrecos >= totalCardsPrecos) {
+    currentIndexPrecos = 0;
+  }
+  updateCarouselPrecos();
+}
+
+function prevSlidePrecos() {
+  currentIndexPrecos--;
+  if (currentIndexPrecos < 0) {
+    currentIndexPrecos = totalCardsPrecos - 1;
+  }
+  updateCarouselPrecos();
+}
+
+function goToSlidePrecos(index) {
+  currentIndexPrecos = index;
+  updateCarouselPrecos();
+}
+
+window.addEventListener("resize", updateCardsPerViewPrecos);
+updateCardsPerViewPrecos();

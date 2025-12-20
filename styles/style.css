@@ -295,7 +295,7 @@ nav.mostrar {
   text-align: center;
 }
 
-.card-diferenciais {
+.card-solucoes {
   color: var(--cor-primaria-900);
   background-color: var(--cor-clara-100);
   margin: 0 16px;
@@ -303,8 +303,8 @@ nav.mostrar {
   border-radius: 8px;
 }
 
-.tit-diferenciais {
-  font-size: var(--fonte-muito-grande);
+.tit-solucoes {
+  font-size: var(--fonte-media);
 }
 
 /* SERVICOS */
@@ -336,7 +336,7 @@ nav.mostrar {
 .card-servicos {
   background-color: var(--cor-primaria-900);
   color: var(--cor-clara-100);
-  padding: 16px;
+  padding: 24px 16px;
   border-radius: 8px;
 }
 
@@ -400,7 +400,7 @@ nav.mostrar {
   font-weight: 400;
 }
 
-/* CARROSSEL */
+/* PORFOLIO CARROSSEL */
 
 .carousel-wrapper {
   max-width: 1200px;
@@ -485,38 +485,176 @@ nav.mostrar {
   border-radius: 6px;
 }
 
-/* PRECOS */
-
+/* PREÇOS */
 .precos {
   padding: 32px 16px;
   text-align: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
-.box-card-precos {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-top: 16px;
+.tit-precos {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  color: var(--cor-primaria-900);
 }
 
+/* CARDS DE PREÇOS */
 .card-precos {
   background-color: var(--cor-primaria-900);
+  padding: 32px 24px;
+  margin: 24px auto 8px;
+  border-radius: 12px;
+  max-width: 100%;
+  text-align: center;
+  /* Propriedades do carrossel */
+  min-width: calc(33.333% - 16px);
+  flex-shrink: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-precos:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.tit-preco-base {
+  margin-bottom: 12px;
+  font-weight: 600;
   color: var(--cor-clara-100);
-  padding: 16px;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+}
+
+.subtit-preco-base {
+  font-weight: 700;
+  color: var(--cor-clara-50);
+  margin-bottom: 16px;
 }
 
 .desc-preco-base {
-  text-align: start;
+  font-size: 1rem;
+  color: var(--cor-clara-50);
+  line-height: 1.5;
+}
+
+/* CARROSSEL DE PREÇOS */
+.carousel-wrapper-precos {
+  max-width: 1200px;
+  width: 100%;
+  position: relative;
+  margin: 0 auto;
+}
+
+.carousel-container-precos {
+  overflow: hidden;
+  position: relative;
+  padding: 0 60px;
+}
+
+.carousel-track-precos {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 24px;
+}
+
+.carousel-btn-precos {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid var(--cor-primaria-900);
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--cor-primaria-900);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 10;
+  font-weight: 700;
+}
+
+.carousel-btn-precos:hover {
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.carousel-btn-precos:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.btn-prev-precos {
+  left: 5px;
+}
+
+.btn-next-precos {
+  right: 5px;
+}
+
+.carousel-btn-precos img {
+  width: 30px;
+  height: 30px;
+}
+
+.carousel-indicators-precos {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.indicator-precos {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator-precos.active {
+  background: var(--cor-primaria-900);
+  width: 32px;
+  border-radius: 6px;
 }
 
 .text-final-precos {
-  font-size: var(--fonte-pequena);
+  margin-top: 32px;
+  font-size: 1rem;
+  color: #666;
   font-style: italic;
-  margin-top: 16px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 1024px) {
+  .card-precos {
+    min-width: calc(50% - 12px);
+  }
+}
+
+@media (max-width: 768px) {
+  .card-precos {
+    min-width: 100%;
+  }
+
+  .carousel-container-precos {
+    padding: 0 50px;
+  }
+
+  .carousel-btn-precos {
+    width: 40px;
+    height: 40px;
+  }
+
+  .tit-precos {
+    font-size: 1.5rem;
+  }
 }
 
 /* DIFERENCIAIS */
@@ -534,7 +672,13 @@ nav.mostrar {
   flex-wrap: wrap;
   gap: 16px;
   margin-top: 16px;
-  justify-content: space-around;
+  justify-content: center;
+  max-width: 800px; /* Controla a largura máxima para forçar 2 por linha */
+}
+
+.box-diferenciais > * {
+  flex: 0 1 calc(50% - 8px); /* Cada item ocupa 50% menos metade do gap */
+  min-width: 140px; /* Largura mínima para não ficar muito estreito */
 }
 
 .tit-bullet-diferenciais {
