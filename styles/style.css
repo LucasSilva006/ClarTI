@@ -62,7 +62,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 10px 16px;
-  background-color: var(--cor-primaria-900);
+  background: linear-gradient(125deg, #0c4169, #001a2c);
   color: var(--cor-clara-50);
   top: -1px;
   z-index: 1000;
@@ -369,11 +369,31 @@ nav.mostrar {
   height: 50px;
 }
 
+.custom-shape-divider-top-1766257136 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1766257136 svg {
+  position: relative;
+  display: block;
+  width: calc(101% + 1.3px);
+  height: 53px;
+}
+
+.custom-shape-divider-top-1766257136 .shape-fill {
+  fill: #f0fcff;
+}
+
 /* PORTFOLIO */
 
 .portfolio {
   background-image: linear-gradient(to bottom, #3d7fab, #001a2c);
-  padding: 40px 16px;
+  padding: 0 16px 40px 16px;
   color: var(--cor-clara-100);
   scroll-margin-top: 60px;
 }
@@ -540,6 +560,8 @@ nav.mostrar {
   flex-shrink: 0;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-precos:hover {
@@ -563,6 +585,19 @@ nav.mostrar {
   font-size: 1rem;
   color: var(--cor-clara-50);
   line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.btn-quero-orcamento {
+  display: block;
+  color: var(--cor-primaria-900);
+  background-color: var(--cor-clara-100);
+  padding: 8px 8px;
+  width: 80%;
+  max-width: 200px;
+  margin: 24px auto 0;
+  border-radius: 8px;
+  margin-top: auto;
 }
 
 /* CARROSSEL DE PREÇOS */
@@ -589,8 +624,8 @@ nav.mostrar {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.95);
-  border: 2px solid var(--cor-primaria-900);
+  background-color: var(--cor-primaria-900);
+  border: none;
   width: 45px;
   height: 45px;
   border-radius: 100%;
@@ -658,6 +693,35 @@ nav.mostrar {
   font-style: italic;
 }
 
+.custom-shape-divider-top-1766257319 {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1766257319 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 46px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1766257319 .shape-fill {
+  fill: #f0fcff;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .custom-shape-divider-top-1766257319 svg {
+    width: calc(100% + 1.3px);
+    height: 39px;
+  }
+}
+
 /* RESPONSIVO */
 @media (max-width: 1024px) {
   .card-precos {
@@ -687,7 +751,7 @@ nav.mostrar {
 /* DIFERENCIAIS */
 
 .diferenciais {
-  padding: 40px 16px;
+  padding: 0 0 40px 0;
   background-image: linear-gradient(125deg, #3d7fab, #001a2c);
   color: var(--cor-clara-100);
   text-align: center;
@@ -698,7 +762,7 @@ nav.mostrar {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  margin-top: 16px;
+  margin-top: 32px;
   justify-content: center;
   max-width: 800px; /* Controla a largura máxima para forçar 2 por linha */
 }
@@ -706,6 +770,10 @@ nav.mostrar {
 .box-diferenciais > * {
   flex: 0 1 calc(50% - 8px); /* Cada item ocupa 50% menos metade do gap */
   min-width: 140px; /* Largura mínima para não ficar muito estreito */
+}
+
+.tit-diferenciais {
+  margin: 32px 16px 0 16px;
 }
 
 .tit-bullet-diferenciais {
@@ -722,7 +790,7 @@ nav.mostrar {
 }
 
 .subtit-diferenciais {
-  margin-top: 32px;
+  margin: 32px 16px 0 16px;
 }
 
 /* CTA FINAL */
@@ -755,7 +823,7 @@ nav.mostrar {
 }
 
 .link-cta-final::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
