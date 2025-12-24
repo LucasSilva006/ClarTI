@@ -3,19 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>ClarTI</title>
-    <link rel="stylesheet" href="styles/style.css" />
+
     <meta name="theme-color" content="#11486e" />
     <meta
       name="description"
       content="ClarTI - Sites profissionais claros e rápidos para empresas que querem resultados. Desenvolvemos sites modernos, acessíveis e focados em gerar contatos reais."
     />
+
     <link
       rel="shortcut icon"
       href="imagens/logos/logo1-redonda.png"
       type="image/x-icon"
     />
+
+    <!-- Fonte (mantendo Ubuntu, sem bloqueio forte) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS principal (sem bloquear renderização) -->
+    <link
+      rel="stylesheet"
+      href="styles/style.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="styles/style.css" />
+    </noscript>
   </head>
+
   <body>
     <header class="header">
       <div class="logo-header">
