@@ -108,7 +108,7 @@ nav {
 
 nav.mostrar {
   display: block;
-  background-color: var(--cor-primaria-700);
+  background: linear-gradient(125deg, #0c4169, #001a2c);
   padding: 4px 16px;
   position: absolute;
   top: 50px;
@@ -142,6 +142,7 @@ nav.mostrar {
 /* HERO SECTION */
 
 .hero-section {
+  background-color: #03131f;
   background-image: linear-gradient(
       to bottom,
       transparent 0%,
@@ -431,11 +432,10 @@ nav.mostrar {
 
 .box-portfolio img {
   width: 100%;
-  height: 200px;
-  object-fit: cover;
+  height: 150px;
+  object-fit: contain;
   border-radius: 4px;
   margin-bottom: 16px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 .tit-card-portfolio {
@@ -881,6 +881,7 @@ footer {
 .colunas-footer a {
   display: block;
   color: #effaffbe;
+  max-width: 150px;
 }
 
 .colunas-footer a:hover {
