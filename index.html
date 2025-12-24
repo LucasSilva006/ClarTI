@@ -22,7 +22,11 @@
         <img src="imagens/logos/isotipo2.webp" alt="Logo" class="img-header" />
         <h1 class="tit-header">ClarTI</h1>
       </div>
-      <button class="button-menu" onclick="mostrarMenu()" alt="Botão de Mostrar Menu">
+      <button
+        class="button-menu"
+        onclick="mostrarMenu()"
+        alt="Botão de Mostrar Menu"
+      >
         <img src="imagens/elements/icons/menu.svg" alt="Menu" />
       </button>
       <nav class="nav">
@@ -46,37 +50,55 @@
 
     <main>
       <section class="hero-section" id="hero-section">
+        <!-- IMAGEM LCP: detectável imediatamente -->
+
         <h1 class="tit-hero-section">
-          Sites profissionais claros e rápidos para empresas que querem resultados
+          Sites profissionais claros e rápidos para empresas que querem
+          resultados
         </h1>
+
         <p class="subtit-hero-section">
           A ClarTI desenvolve sites modernos, acessíveis e focados em gerar
           contatos reais, mesmo para quem não entende de tecnologia.
         </p>
+
         <div class="botoes-hero-section">
-          <a href="https://wa.me/5581981385158?text=Olá! Gostaria de saber mais sobre os serviços da ClarTI" class="cta-hero-section"
-            >Falar com um especialista
-            <img src="imagens/elements/icons/whatsapp.svg" alt="Ícone Whatsapp" />
+          <a
+            href="https://wa.me/5581981385158?text=Olá! Gostaria de saber mais sobre os serviços da ClarTI"
+            class="cta-hero-section"
+          >
+            Falar com um especialista
+            <img src="imagens/elements/icons/whatsapp.svg" alt="" />
           </a>
-          <a href="#portfolio" class="portfolio-hero-section">Ver Projetos </a>
+
+          <a href="#portfolio" class="portfolio-hero-section"> Ver Projetos </a>
         </div>
+
         <div class="div-img-hero">
           <img
             src="imagens/mockups/mockups.png"
-            alt="Mockup Principal"
-            class="img-hero" loading="eager"
+            srcset="imagens/mockups/mockups.png 750w"
+            sizes="(max-width: 768px) 100vw, 750px"
+            width="750"
+            height="500"
+            alt="Mockup de site profissional desenvolvido pela ClarTI"
+            class="img-hero"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
           />
         </div>
       </section>
+
       <section class="problema">
         <h2 class="tit-problema">
           <span class="destaque-tit-problema">Hoje,</span><br />
           o negócio que não tem um site perde oportunidades todos os dias
         </h2>
         <p class="text-problema">
-          Muitos negócios ainda dependem apenas de redes sociais e indicações, sem
-          aparecer no Google e sem saber se o digital realmente está trazendo
-          resultado.
+          Muitos negócios ainda dependem apenas de redes sociais e indicações,
+          sem aparecer no Google e sem saber se o digital realmente está
+          trazendo resultado.
         </p>
         <div class="bullets-dores">
           <div class="bullet1">
@@ -119,9 +141,9 @@
         <div class="box-titulos-solucao">
           <h2 class="tit-solucao">Tecnologia explicada de forma clara</h2>
           <p class="subtit-solucao">
-            Na ClarTI, você entende exatamente o que está sendo feito, quanto está
-            investindo e qual resultado esperar. Sem termos técnicos confusos e
-            sem custos escondidos.
+            Na ClarTI, você entende exatamente o que está sendo feito, quanto
+            está investindo e qual resultado esperar. Sem termos técnicos
+            confusos e sem custos escondidos.
           </p>
         </div>
         <div class="box-solucoes">
@@ -233,19 +255,27 @@
         <div class="boxs-titulos-portfolio">
           <h2 class="tit-portfolio">Projetos desenvolvidos</h2>
           <p class="subtit-portfolio">
-            Alguns sites criados para empresas que buscavam mais presença digital,
-            credibilidade e contatos.
+            Alguns sites criados para empresas que buscavam mais presença
+            digital, credibilidade e contatos.
           </p>
         </div>
         <div class="carousel-wrapper">
           <div class="carousel-container">
-            <button class="carousel-btn btn-prev" onclick="prevSlide()" alt="Botão de Voltar o portfólio">
+            <button
+              class="carousel-btn btn-prev"
+              onclick="prevSlide()"
+              alt="Botão de Voltar o portfólio"
+            >
               <img
                 src="imagens/elements/icons/seta-esquerda-escura.svg"
                 alt="Voltar"
               />
             </button>
-            <button class="carousel-btn btn-next" onclick="nextSlide()" alt="Botão de Próximo portfólio">
+            <button
+              class="carousel-btn btn-next"
+              onclick="nextSlide()"
+              alt="Botão de Próximo portfólio"
+            >
               <img
                 src="imagens/elements/icons/seta-direita-escura.svg"
                 alt="Próximo"
@@ -255,7 +285,8 @@
               <div class="box-portfolio">
                 <img
                   src="imagens/mockups/erondi-mockup.png"
-                  alt="Imagem do site do cliente" loading="lazy"
+                  alt="Imagem do site do cliente"
+                  loading="lazy"
                 />
                 <h3 class="tit-card-portfolio">Erondi Corretor</h3>
                 <p class="subtit-card-portfolio">Página de vendas</p>
@@ -263,7 +294,8 @@
               <div class="box-portfolio">
                 <img
                   src="imagens/mockups/doces-belli-mockup.png"
-                  alt="Imagem do site do cliente" loading="lazy"
+                  alt="Imagem do site do cliente"
+                  loading="lazy"
                 />
                 <h3 class="tit-card-portfolio">Doces Belli</h3>
                 <p class="subtit-card-portfolio">Página de vendas</p>
@@ -271,7 +303,8 @@
               <div class="box-portfolio">
                 <img
                   src="imagens/mockups/joalheria-mockup.png"
-                  alt="Imagem do site do cliente" loading="lazy"
+                  alt="Imagem do site do cliente"
+                  loading="lazy"
                 />
                 <h3 class="tit-card-portfolio">Joalheria Lumière</h3>
                 <p class="subtit-card-portfolio">Página de vendas</p>
@@ -279,7 +312,8 @@
               <div class="box-portfolio">
                 <img
                   src="imagens/mockups/erion-montagens-mockup.png"
-                  alt="Imagem do site do cliente" loading="lazy"
+                  alt="Imagem do site do cliente"
+                  loading="lazy"
                 />
                 <h3 class="tit-card-portfolio">Erison Montagens</h3>
                 <p class="subtit-card-portfolio">Página de vendas</p>
@@ -322,7 +356,8 @@
                 </p>
                 <a
                   href="https://wa.me/5581981385158?text=Olá! Quero um orçamento para Site Institucional (a partir de R$ 649)"
-                  class="btn-quero-orcamento" target="_blank"
+                  class="btn-quero-orcamento"
+                  target="_blank"
                   >Quero um orçamento</a
                 >
               </div>
@@ -332,7 +367,8 @@
                 <p class="desc-preco-base">Foco total em conversão.</p>
                 <a
                   href="https://wa.me/5581981385158?text=Olá! Quero um orçamento para Landing Page (a partir de R$ 497)"
-                  class="btn-quero-orcamento" target="_blank"
+                  class="btn-quero-orcamento"
+                  target="_blank"
                   >Quero um orçamento</a
                 >
               </div>
@@ -344,7 +380,8 @@
                 </p>
                 <a
                   href="https://wa.me/5581981385158?text=Olá! Quero um orçamento para E-commerce (a partir de R$ 3.119)"
-                  class="btn-quero-orcamento" target="_blank"
+                  class="btn-quero-orcamento"
+                  target="_blank"
                   >Quero um orçamento</a
                 >
               </div>
@@ -354,7 +391,8 @@
                 <p class="desc-preco-base">Otimize sua presença digital.</p>
                 <a
                   href="https://wa.me/5581981385158?text=Olá! Quero um orçamento para SEO e Google (a partir de R$ 249/mês)"
-                  class="btn-quero-orcamento" target="_blank"
+                  class="btn-quero-orcamento"
+                  target="_blank"
                   >Quero um orçamento</a
                 >
               </div>
@@ -366,7 +404,8 @@
                 </p>
                 <a
                   href="https://wa.me/5581981385158?text=Olá! Quero um orçamento para Manutenção Mensal (a partir de R$ 179/mês)"
-                  class="btn-quero-orcamento" target="_blank"
+                  class="btn-quero-orcamento"
+                  target="_blank"
                   >Quero um orçamento</a
                 >
               </div>
@@ -378,7 +417,8 @@
                 </p>
                 <a
                   href="https://wa.me/5581981385158?text=Olá! Quero um orçamento para Google Analytics (a partir de R$ 357)"
-                  class="btn-quero-orcamento" target="_blank"
+                  class="btn-quero-orcamento"
+                  target="_blank"
                   >Quero um orçamento</a
                 >
               </div>
@@ -387,8 +427,8 @@
           <div class="carousel-indicators-precos" id="indicatorsPrecos"></div>
         </div>
         <p class="text-final-precos">
-          Os valores variam conforme a complexidade do projeto. Tudo é alinhado e
-          explicado antes do início.
+          Os valores variam conforme a complexidade do projeto. Tudo é alinhado
+          e explicado antes do início.
         </p>
       </section>
       <section class="diferenciais">
@@ -410,19 +450,35 @@
         </div>
         <div class="box-diferenciais">
           <div class="bullet-diferenciais">
-            <img src="imagens/elements/icons/award.svg" alt="Ícone de medalha/especialidade" loading="lazy"/>
+            <img
+              src="imagens/elements/icons/award.svg"
+              alt="Ícone de medalha/especialidade"
+              loading="lazy"
+            />
             <h3 class="tit-bullet-diferenciais">Especialista técnico</h3>
           </div>
           <div class="bullet-diferenciais">
-            <img src="imagens/elements/icons/alvo.svg" alt="Ícone de comunicação clara" loading="lazy"/>
+            <img
+              src="imagens/elements/icons/alvo.svg"
+              alt="Ícone de comunicação clara"
+              loading="lazy"
+            />
             <h3 class="tit-bullet-diferenciais">Comunicação clara</h3>
           </div>
           <div class="bullet-diferenciais">
-            <img src="imagens/elements/icons/conversa.svg" alt="Ícone de conversa transparente" loading="lazy"/>
+            <img
+              src="imagens/elements/icons/conversa.svg"
+              alt="Ícone de conversa transparente"
+              loading="lazy"
+            />
             <h3 class="tit-bullet-diferenciais">Transparência total</h3>
           </div>
           <div class="bullet-diferenciais">
-            <img src="imagens/elements/icons/check.svg" alt="Ícone de foco em resultado" loading="lazy"/>
+            <img
+              src="imagens/elements/icons/check.svg"
+              alt="Ícone de foco em resultado"
+              loading="lazy"
+            />
             <h3 class="tit-bullet-diferenciais">Foco em resultado real</h3>
           </div>
         </div>
@@ -431,7 +487,9 @@
         </p>
       </section>
       <section class="cta-final">
-        <h2 class="tit-cta-final">Seu negócio precisa de um site profissional</h2>
+        <h2 class="tit-cta-final">
+          Seu negócio precisa de um site profissional
+        </h2>
         <p class="subtit-cta-final">
           Vamos conversar e entender sua necessidade. Você recebe uma solução
           clara, sem complicação e sem pressão.
@@ -450,7 +508,8 @@
         <img
           src="imagens/logos/imagotipo2.webp"
           alt="Logo ClarTI"
-          class="logo-final" loading="lazy"
+          class="logo-final"
+          loading="lazy"
         />
         <h3 class="tit-footer">Tecnologia com Clareza</h3>
       </div>

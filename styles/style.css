@@ -211,9 +211,10 @@ nav.mostrar {
 }
 
 .img-hero {
-  position: relative;
-  width: 100vw;
+  display: block;
+  width: 100%;
   max-width: 750px;
+  height: auto;
   margin-top: 8vh;
 }
 
