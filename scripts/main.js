@@ -3,6 +3,7 @@ function mostrarMenu() {
   nav.classList.toggle("mostrar");
 }
 
+// ========== CARROSSEL PORTFÓLIO ==========
 const track = document.getElementById("carouselTrack");
 const indicatorsContainer = document.getElementById("indicators");
 const cards = document.querySelectorAll(".box-portfolio");
@@ -10,6 +11,7 @@ const totalCards = cards.length;
 
 let currentIndex = 0;
 let cardsPerView = 3;
+let cachedCardWidth = 0; // Cache da largura do card
 
 function updateCardsPerView() {
   if (window.innerWidth <= 768) {
@@ -19,17 +21,21 @@ function updateCardsPerView() {
   } else {
     cardsPerView = 3;
   }
+
+  // Lê offsetWidth UMA VEZ e cacheia
+  cachedCardWidth = cards[0]?.offsetWidth || 0;
+
   updateCarousel();
   createIndicators();
 }
 
 function createIndicators() {
   indicatorsContainer.innerHTML = "";
-  const totalSlides = totalCards;
 
-  for (let i = 0; i < totalSlides; i++) {
+  for (let i = 0; i < totalCards; i++) {
     const indicator = document.createElement("button");
     indicator.classList.add("indicator");
+    indicator.setAttribute("aria-label", `Ir para slide ${i + 1}`);
     if (i === currentIndex) {
       indicator.classList.add("active");
     }
@@ -39,10 +45,14 @@ function createIndicators() {
 }
 
 function updateCarousel() {
-  const cardWidth = cards[0].offsetWidth;
+  // Usa o valor cacheado em vez de ler offsetWidth novamente
   const gap = 24;
-  const offset = -(currentIndex * (cardWidth + gap));
-  track.style.transform = `translateX(${offset}px)`;
+  const offset = -(currentIndex * (cachedCardWidth + gap));
+
+  // Usa requestAnimationFrame para otimizar animações
+  requestAnimationFrame(() => {
+    track.style.transform = `translateX(${offset}px)`;
+  });
 
   updateIndicators();
 }
@@ -55,18 +65,12 @@ function updateIndicators() {
 }
 
 function nextSlide() {
-  currentIndex++;
-  if (currentIndex >= totalCards) {
-    currentIndex = 0;
-  }
+  currentIndex = (currentIndex + 1) % totalCards;
   updateCarousel();
 }
 
 function prevSlide() {
-  currentIndex--;
-  if (currentIndex < 0) {
-    currentIndex = totalCards - 1;
-  }
+  currentIndex = (currentIndex - 1 + totalCards) % totalCards;
   updateCarousel();
 }
 
@@ -75,19 +79,24 @@ function goToSlide(index) {
   updateCarousel();
 }
 
-window.addEventListener("resize", updateCardsPerView);
+// Debounce para resize (evita chamadas excessivas)
+let resizeTimer;
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(updateCardsPerView, 150);
+});
 
 updateCardsPerView();
 
-
-
-
+// ========== CARROSSEL PREÇOS ==========
 const trackPrecos = document.getElementById("carouselTrackPrecos");
 const indicatorsContainerPrecos = document.getElementById("indicatorsPrecos");
 const cardsPrecos = document.querySelectorAll(".card-precos");
 const totalCardsPrecos = cardsPrecos.length;
+
 let currentIndexPrecos = 0;
 let cardsPerViewPrecos = 3;
+let cachedCardWidthPrecos = 0; // Cache da largura do card
 
 function updateCardsPerViewPrecos() {
   if (window.innerWidth <= 768) {
@@ -97,17 +106,21 @@ function updateCardsPerViewPrecos() {
   } else {
     cardsPerViewPrecos = 3;
   }
+
+  // Lê offsetWidth UMA VEZ e cacheia
+  cachedCardWidthPrecos = cardsPrecos[0]?.offsetWidth || 0;
+
   updateCarouselPrecos();
   createIndicatorsPrecos();
 }
 
 function createIndicatorsPrecos() {
   indicatorsContainerPrecos.innerHTML = "";
-  const totalSlidesPrecos = totalCardsPrecos;
-  
-  for (let i = 0; i < totalSlidesPrecos; i++) {
+
+  for (let i = 0; i < totalCardsPrecos; i++) {
     const indicator = document.createElement("button");
     indicator.classList.add("indicator-precos");
+    indicator.setAttribute("aria-label", `Ir para plano ${i + 1}`);
     if (i === currentIndexPrecos) {
       indicator.classList.add("active");
     }
@@ -117,10 +130,15 @@ function createIndicatorsPrecos() {
 }
 
 function updateCarouselPrecos() {
-  const cardWidth = cardsPrecos[0].offsetWidth;
+  // Usa o valor cacheado em vez de ler offsetWidth novamente
   const gap = 24;
-  const offset = -(currentIndexPrecos * (cardWidth + gap));
-  trackPrecos.style.transform = `translateX(${offset}px)`;
+  const offset = -(currentIndexPrecos * (cachedCardWidthPrecos + gap));
+
+  // Usa requestAnimationFrame para otimizar animações
+  requestAnimationFrame(() => {
+    trackPrecos.style.transform = `translateX(${offset}px)`;
+  });
+
   updateIndicatorsPrecos();
 }
 
@@ -132,18 +150,13 @@ function updateIndicatorsPrecos() {
 }
 
 function nextSlidePrecos() {
-  currentIndexPrecos++;
-  if (currentIndexPrecos >= totalCardsPrecos) {
-    currentIndexPrecos = 0;
-  }
+  currentIndexPrecos = (currentIndexPrecos + 1) % totalCardsPrecos;
   updateCarouselPrecos();
 }
 
 function prevSlidePrecos() {
-  currentIndexPrecos--;
-  if (currentIndexPrecos < 0) {
-    currentIndexPrecos = totalCardsPrecos - 1;
-  }
+  currentIndexPrecos =
+    (currentIndexPrecos - 1 + totalCardsPrecos) % totalCardsPrecos;
   updateCarouselPrecos();
 }
 
@@ -152,5 +165,11 @@ function goToSlidePrecos(index) {
   updateCarouselPrecos();
 }
 
-window.addEventListener("resize", updateCardsPerViewPrecos);
+// Debounce para resize (evita chamadas excessivas)
+let resizeTimerPrecos;
+window.addEventListener("resize", () => {
+  clearTimeout(resizeTimerPrecos);
+  resizeTimerPrecos = setTimeout(updateCardsPerViewPrecos, 150);
+});
+
 updateCardsPerViewPrecos();

@@ -9,7 +9,7 @@
     <meta name="theme-color" content="#11486e" />
     <meta
       name="description"
-      content="ClarTI - Sites profissionais claros e rápidos para empresas que querem resultados. Desenvolvemos sites modernos, acessíveis e focados em gerar contatos reais."
+      content="ClarTI - Sites profissionais claros e rápidos para empresas que querem resultados. Desenvolvemos sites modernos, acessíveis e focados em gerar contatos reais. Agênci  a especializada em desenvolvimento web."
     />
 
     <link
@@ -18,7 +18,7 @@
       type="image/x-icon"
     />
 
-    <!-- Fonte (mantendo Ubuntu, sem bloqueio forte) -->
+    <!-- Fonte otimizada -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,22 +26,20 @@
       rel="stylesheet"
     />
 
-    <!-- CSS principal (sem bloquear renderização) -->
-    <link
-      rel="stylesheet"
-      href="styles/style.css"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript>
-      <link rel="stylesheet" href="styles/style.css" />
-    </noscript>
+    <!-- CSS principal (DEVE bloquear renderização) -->
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
 
   <body>
     <header class="header">
       <div class="logo-header">
-        <img src="imagens/logos/isotipo2.webp" alt="Logo" class="img-header" />
+        <img
+          src="imagens/logos/isotipo2.webp"
+          alt="Logo"
+          class="img-header"
+          width="40"
+          height="40"
+        />
         <h1 class="tit-header">ClarTI</h1>
       </div>
       <button
@@ -49,7 +47,12 @@
         onclick="mostrarMenu()"
         alt="Botão de Mostrar Menu"
       >
-        <img src="imagens/elements/icons/menu.svg" alt="Menu" />
+        <img
+          src="imagens/elements/icons/menu.svg"
+          alt="Menu"
+          width="32"
+          height="32"
+        />
       </button>
       <nav class="nav">
         <ul>
@@ -67,7 +70,14 @@
           </li>
         </ul>
       </nav>
-      <a href="https://wa.me/5581981385158?text=Olá! Gostaria de saber mais sobre os serviços da ClarTI" class="btn-cta-header" alt="Botão Principal de Falar Conosco no WhatsApp">Fale conosco</a>
+      <a
+        href="https://wa.me/5581981385158?text=Olá! Gostaria de saber mais sobre os serviços da ClarTI"
+        class="btn-cta-header"
+        alt="Botão Principal de Falar Conosco no WhatsApp"
+        width="28"
+        height="28"
+        >Fale conosco</a
+      >
     </header>
 
     <main>
@@ -127,22 +137,25 @@
             <img
               src="imagens/elements/icons/globe-off.svg"
               alt="Ícone de sem site"
+              width="40"
+              height="40"
             />
-            <p class="desc-bullet1">Não tem site profissional</p>
           </div>
           <div class="bullet2">
             <img
               src="imagens/elements/icons/search-off.svg"
               alt="Ícone de sem pesquisa"
+              width="40"
+              height="40"
             />
-            <p class="desc-bullet2">Não aparece no Google</p>
           </div>
           <div class="bullet3">
             <img
               src="imagens/elements/icons/no-analytics.svg"
               alt="Ícone de sem análise"
+              width="40"
+              height="40"
             />
-            <p class="desc-bullet3">Não tem dados relevantes</p>
           </div>
         </div>
       </section>
@@ -197,6 +210,8 @@
               src="imagens/elements/icons/layout.svg"
               alt=""
               class="icon-do-servico"
+              width="50"
+              height="50"
             />
             <h3 class="tit-card-servico">Site institucional</h3>
             <p class="desc-card-servicos">
@@ -208,6 +223,8 @@
               src="imagens/elements/icons/file-text.svg"
               alt=""
               class="icon-do-servico"
+              width="50"
+              height="50"
             />
             <h3 class="tit-card-servico">Landing pages</h3>
             <p class="desc-card-servicos">
@@ -219,6 +236,8 @@
               src="imagens/elements/icons/shopping-cart.svg"
               alt=""
               class="icon-do-servico"
+              width="50"
+              height="50"
             />
             <h3 class="tit-card-servico">E-commerce</h3>
             <p class="desc-card-servicos">
@@ -230,6 +249,8 @@
               src="imagens/elements/icons/seo.svg"
               alt=""
               class="icon-do-servico"
+              width="50"
+              height="50"
             />
             <h3 class="tit-card-servico">SEO e Google</h3>
             <p class="desc-card-servicos">
@@ -241,6 +262,8 @@
               src="imagens/elements/icons/settings.svg"
               alt=""
               class="icon-do-servico"
+              width="50"
+              height="50"
             />
             <h3 class="tit-card-servico">Manutenção mensal</h3>
             <p class="desc-card-servicos">
@@ -252,6 +275,8 @@
               src="imagens/elements/icons/grafico.svg"
               alt=""
               class="icon-do-servico"
+              width="50"
+              height="50"
             />
             <h3 class="tit-card-servico">Google Analytics</h3>
             <p class="desc-card-servicos">
@@ -291,6 +316,8 @@
               <img
                 src="imagens/elements/icons/seta-esquerda-escura.svg"
                 alt="Voltar"
+                width="30"
+                height="30"
               />
             </button>
             <button
@@ -301,6 +328,8 @@
               <img
                 src="imagens/elements/icons/seta-direita-escura.svg"
                 alt="Próximo"
+                width="30"
+                height="30"
               />
             </button>
             <div class="carousel-track" id="carouselTrack">
@@ -309,6 +338,8 @@
                   src="imagens/mockups/erondi-mockup.png"
                   alt="Imagem do site do cliente"
                   loading="lazy"
+                  width="300"
+                  height="150"
                 />
                 <h3 class="tit-card-portfolio">Erondi Corretor</h3>
                 <p class="subtit-card-portfolio">Página de vendas</p>
@@ -318,6 +349,8 @@
                   src="imagens/mockups/doces-belli-mockup.png"
                   alt="Imagem do site do cliente"
                   loading="lazy"
+                  width="300"
+                  height="150"
                 />
                 <h3 class="tit-card-portfolio">Doces Belli</h3>
                 <p class="subtit-card-portfolio">Página de vendas</p>
@@ -327,6 +360,8 @@
                   src="imagens/mockups/joalheria-mockup.png"
                   alt="Imagem do site do cliente"
                   loading="lazy"
+                  width="300"
+                  height="150"
                 />
                 <h3 class="tit-card-portfolio">Joalheria Lumière</h3>
                 <p class="subtit-card-portfolio">Página de vendas</p>
@@ -336,6 +371,8 @@
                   src="imagens/mockups/erion-montagens-mockup.png"
                   alt="Imagem do site do cliente"
                   loading="lazy"
+                  width="300"
+                  height="150"
                 />
                 <h3 class="tit-card-portfolio">Erison Montagens</h3>
                 <p class="subtit-card-portfolio">Página de vendas</p>
@@ -357,6 +394,8 @@
               <img
                 src="imagens/elements/icons/seta-esquerda-clara.svg"
                 alt="VoltarPreço"
+                width="30"
+                height="30"
               />
             </button>
             <button
@@ -367,6 +406,8 @@
               <img
                 src="imagens/elements/icons/seta-direita-clara.svg"
                 alt="PróximoPreço"
+                width="30"
+                height="30"
               />
             </button>
             <div class="carousel-track-precos" id="carouselTrackPrecos">
@@ -476,6 +517,8 @@
               src="imagens/elements/icons/award.svg"
               alt="Ícone de medalha/especialidade"
               loading="lazy"
+              width="60"
+              height="60"
             />
             <h3 class="tit-bullet-diferenciais">Especialista técnico</h3>
           </div>
@@ -484,6 +527,8 @@
               src="imagens/elements/icons/alvo.svg"
               alt="Ícone de comunicação clara"
               loading="lazy"
+              width="60"
+              height="60"
             />
             <h3 class="tit-bullet-diferenciais">Comunicação clara</h3>
           </div>
@@ -492,6 +537,8 @@
               src="imagens/elements/icons/conversa.svg"
               alt="Ícone de conversa transparente"
               loading="lazy"
+              width="60"
+              height="60"
             />
             <h3 class="tit-bullet-diferenciais">Transparência total</h3>
           </div>
@@ -500,6 +547,8 @@
               src="imagens/elements/icons/check.svg"
               alt="Ícone de foco em resultado"
               loading="lazy"
+              width="60"
+              height="60"
             />
             <h3 class="tit-bullet-diferenciais">Foco em resultado real</h3>
           </div>
@@ -532,6 +581,8 @@
           alt="Logo ClarTI"
           class="logo-final"
           loading="lazy"
+          width="80"
+          height="80"
         />
         <h3 class="tit-footer">Tecnologia com Clareza</h3>
       </div>

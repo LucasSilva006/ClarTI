@@ -24,6 +24,8 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 * {
@@ -193,7 +195,8 @@ nav.mostrar {
   transition: transform var(--transicao-padrao);
 }
 
-.cta-hero-section:hover, .portfolio-hero-section:hover {
+.cta-hero-section:hover,
+.portfolio-hero-section:hover {
   transform: scale(1.05);
 }
 
@@ -1077,7 +1080,6 @@ footer {
   footer {
     padding: 24px 32px 20px 32px;
   }
-  
 }
 
 @media (min-width: 1024px) {
@@ -1107,7 +1109,8 @@ footer {
     align-self: center;
   }
 
-  .cta-hero-section, .portfolio-hero-section {
+  .cta-hero-section,
+  .portfolio-hero-section {
     height: 50px;
   }
 
@@ -1158,7 +1161,7 @@ footer {
     display: none;
   }
 
-  .box-diferenciais{
+  .box-diferenciais {
     max-width: 70%;
     flex-wrap: nowrap;
   }
@@ -1234,7 +1237,7 @@ footer {
     display: none;
   }
 
-  .box-diferenciais{
+  .box-diferenciais {
     max-width: 70%;
     flex-wrap: nowrap;
   }
