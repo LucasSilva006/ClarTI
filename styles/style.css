@@ -117,7 +117,14 @@ nav.mostrar {
 
 .item-li {
   color: var(--cor-clara-100);
-  padding: 0 16px;
+  padding: 8px 16px;
+  transition: all var(--transicao-padrao);
+}
+
+.item-li:hover {
+  background-color: var(--cor-clara-100);
+  border-radius: 4px;
+  color: var(--cor-primaria-900);
 }
 
 .li-contato {
@@ -183,6 +190,11 @@ nav.mostrar {
   font-weight: bold;
   justify-content: space-around;
   align-items: center;
+  transition: transform var(--transicao-padrao);
+}
+
+.cta-hero-section:hover, .portfolio-hero-section:hover {
+  transform: scale(1.05);
 }
 
 .cta-hero-section img {
@@ -204,6 +216,7 @@ nav.mostrar {
   font-weight: bold;
   justify-content: center;
   align-items: center;
+  transition: transform var(--transicao-padrao);
 }
 
 .div-img-hero {
@@ -768,7 +781,7 @@ nav.mostrar {
   gap: 16px;
   margin-top: 32px;
   justify-content: center;
-  max-width: 800px; /* Controla a largura máxima para forçar 2 por linha */
+  max-width: 400px;
 }
 
 .box-diferenciais > * {
@@ -939,6 +952,12 @@ footer {
       color: var(--cor-primaria-900);
       padding: 8px 16px;
       border-radius: 4px;
+      transition: all var(--transicao-padrao);
+    }
+
+    .btn-cta-header:hover {
+      background-color: var(--cor-primaria-500);
+      color: var(--cor-clara-50);
     }
   }
 
@@ -1017,13 +1036,28 @@ footer {
     padding: 0 32px 40px 32px;
   }
 
+  .carousel-btn {
+    display: none;
+  }
+
+  .carousel-track {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 24px auto 0px;
+    width: 60vw;
+  }
+
+  .indicator {
+    display: none;
+  }
+
   .precos {
     padding: 40px 32px;
   }
 
   .box-diferenciais {
     margin: 32px auto;
-    max-width: 50vw;
+    max-width: 39vw;
   }
 
   .cta-final {
@@ -1047,6 +1081,9 @@ footer {
 }
 
 @media (min-width: 1024px) {
+  header {
+    padding: 16px 80px;
+  }
   .hero-section {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1068,5 +1105,141 @@ footer {
   .div-img-hero {
     grid-area: 1 / 2 / 4 / 3;
     align-self: center;
+  }
+
+  .cta-hero-section, .portfolio-hero-section {
+    height: 50px;
+  }
+
+  .problema {
+    padding: 40px 80px;
+  }
+
+  .box-titulos-solucao {
+    padding: 40px 80px;
+  }
+
+  .box-solucoes {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .servicos {
+    padding: 40px 80px;
+  }
+
+  .box-dos-servicos {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 30px 7vw;
+  }
+
+  .portfolio {
+    padding: 0 80px 40px 80px;
+  }
+
+  .carousel-track {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 24px auto 0px;
+    width: 70vw;
+  }
+
+  .carousel-btn-precos {
+    display: none;
+  }
+
+  .carousel-track-precos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0px auto;
+    width: 70vw;
+  }
+
+  .indicator-precos {
+    display: none;
+  }
+
+  .box-diferenciais{
+    max-width: 70%;
+    flex-wrap: nowrap;
+  }
+
+  footer {
+    padding: 24px 80px 24px 80px;
+  }
+
+  .box-das-colunas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    padding: 16px 12vw;
+  }
+  .problema {
+    padding: 40px 12vw;
+  }
+
+  .box-titulos-solucao {
+    padding: 40px 12vw;
+  }
+
+  .box-solucoes {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .servicos {
+    padding: 40px 12vw;
+  }
+
+  .box-dos-servicos {
+    grid-template-columns: repeat(3, 1fr);
+    margin: 30px 7vw;
+  }
+
+  .portfolio {
+    padding: 0 12vw 40px 12vw;
+  }
+
+  .carousel-track {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 24px auto 0px;
+    width: 70vw;
+  }
+
+  .card-precos {
+    width: 28vw;
+    margin: 0 auto;
+  }
+
+  .carousel-btn-precos {
+    display: none;
+  }
+
+  .carousel-track-precos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 24px auto 0px;
+    width: 60vw;
+  }
+
+  .carousel-container-precos {
+    overflow: visible;
+    padding: 0;
+  }
+
+  .indicator-precos {
+    display: none;
+  }
+
+  .box-diferenciais{
+    max-width: 70%;
+    flex-wrap: nowrap;
+  }
+
+  footer {
+    padding: 24px 12vw 24px 12vw;
   }
 }
