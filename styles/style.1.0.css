@@ -157,7 +157,7 @@ nav.mostrar {
       transparent 0%,
       rgba(0, 0, 0, 0.5) 1000%
     ),
-    url("../imagens/elements/mesh-gradient.png");
+    url("../imagens/elements/mesh-gradient.webp");
   background-size: cover;
   color: var(--cor-clara-50);
 }
