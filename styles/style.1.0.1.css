@@ -750,6 +750,8 @@ nav.mostrar {
 }
 
 @media (max-width: 768px) {
+
+
   .card-precos {
     min-width: 100%;
   }
@@ -1006,6 +1008,10 @@ footer {
 
   .problema {
     padding: 40px 32px;
+  }
+
+  .bullets-dores {
+    gap: 64px;
   }
 
   .box-titulos-solucao {
