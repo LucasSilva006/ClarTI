@@ -17,9 +17,9 @@ function updateCardsPerView() {
   if (window.innerWidth <= 768) {
     cardsPerView = 1;
   } else if (window.innerWidth <= 1024) {
-    cardsPerView = 1;
+    cardsPerView = 2;
   } else {
-    cardsPerView = 1;
+    cardsPerView = 3;
   }
 
   // Lê offsetWidth UMA VEZ e cacheia
