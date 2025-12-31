@@ -151,15 +151,19 @@ nav.mostrar {
 /* HERO SECTION */
 
 .hero-section {
+  position: relative;
+  overflow: hidden;
   background-color: #03131f;
-  background-image: linear-gradient(
-      to bottom,
-      transparent 0%,
-      rgba(0, 0, 0, 0.5) 1000%
-    ),
-    url("../imagens/elements/mesh-gradient.webp");
-  background-size: cover;
   color: var(--cor-clara-50);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 
 .tit-hero-section {
@@ -322,6 +326,10 @@ nav.mostrar {
   margin-bottom: 16px;
 }
 
+.desc-solucao {
+  margin-top: 16px;
+}
+
 .box-solucoes {
   display: flex;
   flex-direction: column;
@@ -337,6 +345,7 @@ nav.mostrar {
   width: 70%;
   max-width: 600px;
   margin: 0 auto;
+  text-align: start;
 }
 
 .tit-solucoes {
@@ -1024,6 +1033,7 @@ footer {
 
   .card-solucoes {
     display: flex;
+    flex-direction: column;
     width: 90%;
     align-items: center;
     justify-content: center;
@@ -1135,8 +1145,8 @@ footer {
   }
 
   .box-dos-servicos {
-    grid-template-columns: repeat(3, 1fr);
-    margin: 30px 7vw;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 30px 4vw;
   }
 
   .portfolio {
@@ -1200,8 +1210,8 @@ footer {
   }
 
   .box-dos-servicos {
-    grid-template-columns: repeat(3, 1fr);
-    margin: 30px 7vw;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 30px 3vw;
   }
 
   .portfolio {
