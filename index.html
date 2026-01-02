@@ -26,7 +26,7 @@
       rel="stylesheet"
     />
 
-      <link rel="stylesheet" href="styles/style.css?v=1.0.3" />
+    <link rel="stylesheet" href="styles/style.css?v=1.0.4" />
   </head>
 
   <body>
@@ -122,18 +122,31 @@
         </div>
 
         <div class="div-img-hero">
-          <img
-            src="imagens/mockups/hero-img-mockup.webp"
-            srcset="imagens/mockups/hero-img-mockup.webp 750w"
-            sizes="(max-width: 768px) 100vw, 750px"
-            width="750"
-            height="500"
-            alt="Mockup de site profissional desenvolvido pela ClarTI"
-            class="img-hero"
-            loading="eager"
-            fetchpriority="high"
-            decoding="async"
-          />
+          <picture>
+            <!-- Desktop grande -->
+            <source
+              media="(min-width: 1024px)"
+              srcset="imagens/mockups/hero-img-mockup-gran.webp"
+            />
+
+            <!-- Tablets -->
+            <source
+              media="(min-width: 600px)"
+              srcset="imagens/mockups/hero-img-mockup-med.webp"
+            />
+
+            <!-- Mobile -->
+            <img
+              src="imagens/mockups/hero-img-mockup-peq.webp"
+              width="300"
+              height="177"
+              alt="Mockup de site profissional desenvolvido pela ClarTI"
+              class="img-hero"
+              loading="eager"
+              fetchpriority="high"
+              decoding="async"
+            />
+          </picture>
         </div>
       </section>
 
