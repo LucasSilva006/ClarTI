@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de Portfólio | ClarTI</title>
+
+    <link
+      rel="shortcut icon"
+      href="imagens/logos/logo1-redonda.png"
+      type="image/x-icon"
+    />
+
+    <!-- Fonte otimizada -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/style-portfolio.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo-header">
+        <img
+          src="../imagens/logos/isotipo2.webp"
+          alt="Logo"
+          class="img-header"
+          width="40"
+          height="40"
+        />
+        <p class="tit-header">ClarTI</p>
+      </div>
+      <button
+        class="button-menu"
+        onclick="mostrarMenu()"
+        alt="Botão de Mostrar Menu"
+      >
+        <img
+          src="../imagens/elements/icons/menu.svg"
+          alt="Menu"
+          width="32"
+          height="32"
+        />
+      </button>
+      <nav class="nav">
+        <ul>
+          <li class="li-projetos">
+            <a href="../index.html" class="item-li">Home</a>
+          </li>
+          <li class="li-servicos">
+            <a href="#servicos" class="item-li">Serviços</a>
+          </li>
+          <li class="li-precos">
+            <a href="#precos" class="item-li">Preços</a>
+          </li>
+          <li class="li-contato">
+            <a href="#footer" class="item-li">Contato</a>
+          </li>
+        </ul>
+      </nav>
+      <a
+        href="https://wa.me/5581985187208?text=Olá! Gostaria de saber mais sobre os serviços da ClarTI"
+        class="btn-cta-header"
+        alt="Botão Principal de Falar Conosco no WhatsApp"
+        width="28"
+        height="28"
+        >Fale conosco</a
+      >
+    </header>
+
+    <main>
+      <section class="projetos">
+        <div class="box-text-projetos">
+          <h1 class="tit-projetos">Nossos Projetos</h1>
+          <p class="subtit-projetos">Confira alguns dos nossos trabalhos</p>
+        </div>
+        <div class="box-imgs-projetos">
+            <h2 class="tit-card-projeto">AureaLex Advocacia</h2>
+          <div class="card-img-projetos">
+            <img
+              src="../imagens/pag-portfolio/aurealex-advocacia.webp"
+              alt="Wireframe da AureaLex Advocacia"
+              class="img-projeto"
+            />
+          </div>
+          <div class="btn-exibir">
+            <button onclick="exibirCardPort()">Exibir</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="modal" id="modalProjeto">
+      <div class="modal-content">
+        <span class="modal-close" onclick="fecharModal()">x</span>
+        <img
+          src="../imagens/pag-portfolio/aurealex-advocacia.webp"
+          alt="Projeto em destaque"
+        />
+      </div>
+    </div>
+    <script src="../scripts/pag-portfolio.js"></script>
+  </body>
+</html>

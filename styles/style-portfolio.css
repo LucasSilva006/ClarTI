@@ -1,0 +1,163 @@
+:root {
+  /* Marca */
+  --cor-primaria-900: #092a41; /* fundo principal */
+  --cor-primaria-700: #11486e; /* botões e destaques */
+  --cor-primaria-500: #1b6fa1; /* hover e links */
+
+  /* Cores claras */
+  --cor-clara-100: #f0fcff; /* fundo claro */
+  --cor-clara-50: #effaff; /* texto claro / ícones */
+
+  /* Fontes */
+  --fonte-base: "Ubuntu", system-ui, -apple-system, sans-serif;
+  --fonte-pequena: 0.75rem; /* 12px */
+  --fonte-normal: 0.875rem; /* 14px */
+  --fonte-media: 1rem; /* 16px */
+  --fonte-grande: 1.25rem; /* 20px */
+  --fonte-muito-grande: 1.75rem; /* 28px */
+
+  --transicao-rapida: 0.2s ease;
+  --transicao-padrao: 0.3s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--fonte-base);
+  background-color: var(--cor-clara-100);
+  color: var(--cor-primaria-900);
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: var(--fonte-muito-grande);
+}
+
+a {
+  color: var(--cor-primaria-700);
+  text-decoration: none;
+}
+
+button {
+  background-color: var(--cor-primaria-700);
+  color: var(--cor-clara-100);
+  padding: 8px 32px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.projetos {
+  padding: 16px 24px;
+}
+
+.subtit-projetos {
+  margin-top: 8px;
+}
+
+.tit-card-projeto {
+    font-size: 1em;
+    margin-top: 40px;
+}
+
+.card-img-projetos {
+  background-color: var(--cor-primaria-500);
+  width: 100%;
+  height: 40vh;
+  overflow-y: hidden;
+  margin: 24px auto;
+  border-radius: 8px;
+  box-shadow: 2px 5px 5px rgba(0, 0, 0, 0.164);
+}
+
+.img-projeto {
+  max-width: 100%;
+}
+
+.btn-exibir {
+  text-align: center;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding-top: 30px;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal.ativa {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  background: #fff;
+  width: 75%;
+  max-height: 80vh;
+  border-radius: 12px;
+  position: relative;
+  overflow: auto;
+
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+::-webkit-scrollbar {
+  display: none;
+  scrollbar-width: none;
+}
+
+.modal.ativa .modal-content {
+  transform: scale(1);
+}
+
+.modal-scroll {
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+}
+
+.modal-close {
+  background-color: white;
+  padding: 0px 10px;
+  border-radius: 100%;
+  position: sticky;
+  top: 0;
+  font-size: 32px;
+  cursor: pointer;
+  float: right;
+}

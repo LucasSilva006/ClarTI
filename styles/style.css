@@ -561,6 +561,30 @@ nav.mostrar {
   border-radius: 6px;
 }
 
+.box-btn-pag-portfolio {
+  text-align: center;
+  align-items: center;
+}
+
+.btn-pag-portfolio {
+  display: flex;
+  background-color: var(--cor-clara-100);
+  padding: 12px 24px;
+  border-radius: 8px;
+  color: var(--cor-primaria-900);
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  max-width: 500px;
+  align-items: center;
+  margin: 32px auto 0px;
+  justify-content: center;
+}
+
+.btn-pag-portfolio:hover {
+  transform: scale(1.03);
+  color: var(--cor-clara-100);
+  background-color: var(--cor-primaria-700);
+}
+
 /* PREÇOS */
 .precos {
   padding: 40px 16px;
