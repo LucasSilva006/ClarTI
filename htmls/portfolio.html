@@ -48,7 +48,7 @@
       </button>
       <nav class="nav">
         <ul>
-          <li class="li-projetos">
+          <li class="li-home">
             <a href="../index.html" class="item-li">Home</a>
           </li>
           <li class="li-servicos">
@@ -78,8 +78,9 @@
           <h1 class="tit-projetos">Nossos Projetos</h1>
           <p class="subtit-projetos">Confira alguns dos nossos trabalhos</p>
         </div>
+        <!-- CARD 1 -->
         <div class="box-imgs-projetos">
-            <h2 class="tit-card-projeto">AureaLex Advocacia</h2>
+          <h2 class="tit-card-projeto">AureaLex Advocacia</h2>
           <div class="card-img-projetos">
             <img
               src="../imagens/pag-portfolio/aurealex-advocacia.webp"
@@ -88,18 +89,122 @@
             />
           </div>
           <div class="btn-exibir">
-            <button onclick="exibirCardPort()">Exibir</button>
+            <button
+              onclick="exibirCardPort('../imagens/pag-portfolio/aurealex-advocacia.webp')"
+            >
+              Exibir
+            </button>
           </div>
         </div>
+        <!-- CARD 2 -->
+        <div class="box-imgs-projetos">
+          <h2 class="tit-card-projeto">Lúmina Imóveis</h2>
+          <div class="card-img-projetos">
+            <img
+              src="../imagens/pag-portfolio/lumina-imoveis.webp"
+              alt="Wireframe da AureaLex Advocacia"
+              class="img-projeto"
+            />
+          </div>
+          <div class="btn-exibir">
+            <button
+              onclick="exibirCardPort('../imagens/pag-portfolio/lumina-imoveis.webp')"
+            >
+              Exibir
+            </button>
+          </div>
+        </div>
+        <!-- CARD 3 -->
+        <div class="box-imgs-projetos">
+          <h2 class="tit-card-projeto">Nexum Contabilidade</h2>
+          <div class="card-img-projetos">
+            <img
+              src="../imagens/pag-portfolio/nexum-contabilidade.webp"
+              alt="Wireframe da AureaLex Advocacia"
+              class="img-projeto"
+            />
+          </div>
+          <div class="btn-exibir">
+            <button
+              onclick="exibirCardPort('../imagens/pag-portfolio/nexum-contabilidade.webp')"
+            >
+              Exibir
+            </button>
+          </div>
+        </div>
+        <div class="em-breve"><p class="text-em-breve">MAIS EM BREVE...</p></div>
       </section>
     </main>
+    <footer id="footer2">
+      <div class="coluna-logo-footer">
+        <img
+          src="../imagens/logos/imagotipo2.webp"
+          alt="Logo ClarTI"
+          class="logo-final"
+          loading="lazy"
+          width="80"
+          height="80"
+        />
+        <h3 class="tit-footer">Tecnologia com Clareza</h3>
+      </div>
+      <div class="box-das-colunas">
+        <div class="colunas-footer coluna-servico">
+          <h3 class="footer-servicos">Serviços</h3>
+          <ul>
+            <li>
+              <a
+                href="https://wa.me/5581985187208?text=Olá! Gostaria de um orçamento para Site Institucional"
+                target="_blank"
+                >Site institucional</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://wa.me/5581985187208?text=Olá! Gostaria de um orçamento para Landing Page"
+                target="_blank"
+                >Landing page</a
+              >
+            </li>
+
+            <li>
+              <a
+                href="https://wa.me/5581985187208?text=Olá! Gostaria de saber mais sobre SEO e Google"
+                target="_blank"
+                >SEO e Google</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://wa.me/5581985187208?text=Olá! Gostaria de contratar Manutenção Mensal"
+                target="_blank"
+                >Manutenção mensal</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="colunas-footer coluna-navegacao">
+          <h3 class="footer-navegacao">Navegação</h3>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#precos">Preços</a></li>
+            <li><a href="#solucao">Sobre a ClarTI</a></li>
+          </ul>
+        </div>
+        <div class="colunas-footer coluna-contato">
+          <h3 class="footer-contato">Fale com a ClarTI</h3>
+          <p>agencia.clarti@gmail.com</p>
+          <p>(81) 98518-7208</p>
+        </div>
+      </div>
+
+      <div class="copy-final">
+        <p>© 2026 ClarTI. Todos os direitos reservados.</p>
+      </div>
+    </footer>
     <div class="modal" id="modalProjeto">
       <div class="modal-content">
         <span class="modal-close" onclick="fecharModal()">x</span>
-        <img
-          src="../imagens/pag-portfolio/aurealex-advocacia.webp"
-          alt="Projeto em destaque"
-        />
+        <img src="" alt="Projeto em destaque" />
       </div>
     </div>
     <script src="../scripts/pag-portfolio.js"></script>
