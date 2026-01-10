@@ -17,3 +17,21 @@ function fecharModal() {
   modal.classList.remove("ativa");
   document.body.style.overflow = "auto";
 } 
+
+const elementos = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("ativo");
+        observer.unobserve(entry.target); // anima só uma vez
+      }
+    });
+  },
+  {
+    threshold: 0.2, // 20% visível já anima
+  }
+);
+
+elementos.forEach((el) => observer.observe(el));

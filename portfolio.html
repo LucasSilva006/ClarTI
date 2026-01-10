@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfólio da ClarTI com sites profissionais, rápidos e focados em gerar contatos reais. Projetos claros, modernos e pensados para pequenos negócios."
+    />
+
     <title>Página de Portfólio | ClarTI</title>
 
     <link
@@ -19,20 +24,22 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="../styles/style.css" />
-    <link rel="stylesheet" href="../styles/style-portfolio.css" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/style-portfolio.css" />
   </head>
   <body>
     <header class="header">
       <div class="logo-header">
-        <img
-          src="../imagens/logos/isotipo2.webp"
-          alt="Logo"
-          class="img-header"
-          width="40"
-          height="40"
-        />
-        <p class="tit-header">ClarTI</p>
+        <a href="index.html" class="link-home-header">
+          <img
+            src="imagens/logos/isotipo2.webp"
+            alt="Logo"
+            class="img-header"
+            width="40"
+            height="40"
+          />
+          <p class="tit-header">ClarTI</p>
+        </a>
       </div>
       <button
         class="button-menu"
@@ -40,7 +47,7 @@
         alt="Botão de Mostrar Menu"
       >
         <img
-          src="../imagens/elements/icons/menu.svg"
+          src="imagens/elements/icons/menu.svg"
           alt="Menu"
           width="32"
           height="32"
@@ -49,16 +56,16 @@
       <nav class="nav">
         <ul>
           <li class="li-home">
-            <a href="../index.html" class="item-li">Home</a>
+            <a href="index.html" class="item-li">Home</a>
           </li>
           <li class="li-servicos">
-            <a href="#servicos" class="item-li">Serviços</a>
+            <a href="index.html#servicos" class="item-li">Serviços</a>
           </li>
           <li class="li-precos">
-            <a href="#precos" class="item-li">Preços</a>
+            <a href="index.html#precos" class="item-li">Preços</a>
           </li>
           <li class="li-contato">
-            <a href="#footer" class="item-li">Contato</a>
+            <a href="index.html#footer" class="item-li">Contato</a>
           </li>
         </ul>
       </nav>
@@ -79,66 +86,75 @@
           <p class="subtit-projetos">Confira alguns dos nossos trabalhos</p>
         </div>
         <!-- CARD 1 -->
-        <div class="box-imgs-projetos">
+        <div class="box-imgs-projetos reveal">
           <h2 class="tit-card-projeto">AureaLex Advocacia</h2>
           <div class="card-img-projetos">
             <img
-              src="../imagens/pag-portfolio/aurealex-advocacia.webp"
+              src="imagens/pag-portfolio/aurealex-advocacia.webp"
               alt="Wireframe da AureaLex Advocacia"
               class="img-projeto"
+              width="265"
+              height="680"
+              fetchpriority="high"
             />
           </div>
           <div class="btn-exibir">
             <button
-              onclick="exibirCardPort('../imagens/pag-portfolio/aurealex-advocacia.webp')"
+              onclick="exibirCardPort('imagens/pag-portfolio/aurealex-advocacia.webp')"
             >
               Exibir
             </button>
           </div>
         </div>
         <!-- CARD 2 -->
-        <div class="box-imgs-projetos">
+        <div class="box-imgs-projetos reveal">
           <h2 class="tit-card-projeto">Lúmina Imóveis</h2>
           <div class="card-img-projetos">
             <img
-              src="../imagens/pag-portfolio/lumina-imoveis.webp"
-              alt="Wireframe da AureaLex Advocacia"
+              src="imagens/pag-portfolio/lumina-imoveis.webp"
+              alt="Wireframe da Lúmina Imóveis"
               class="img-projeto"
+              width="265"
+              height="680"
             />
           </div>
           <div class="btn-exibir">
             <button
-              onclick="exibirCardPort('../imagens/pag-portfolio/lumina-imoveis.webp')"
+              onclick="exibirCardPort('imagens/pag-portfolio/lumina-imoveis.webp')"
             >
               Exibir
             </button>
           </div>
         </div>
         <!-- CARD 3 -->
-        <div class="box-imgs-projetos">
+        <div class="box-imgs-projetos reveal">
           <h2 class="tit-card-projeto">Nexum Contabilidade</h2>
           <div class="card-img-projetos">
             <img
-              src="../imagens/pag-portfolio/nexum-contabilidade.webp"
-              alt="Wireframe da AureaLex Advocacia"
+              src="imagens/pag-portfolio/nexum-contabilidade.webp"
+              alt="Wireframe da Nexum Contabilidade"
               class="img-projeto"
+              width="265"
+              height="680"
             />
           </div>
           <div class="btn-exibir">
             <button
-              onclick="exibirCardPort('../imagens/pag-portfolio/nexum-contabilidade.webp')"
+              onclick="exibirCardPort('imagens/pag-portfolio/nexum-contabilidade.webp')"
             >
               Exibir
             </button>
           </div>
         </div>
-        <div class="em-breve"><p class="text-em-breve">MAIS EM BREVE...</p></div>
+        <div class="em-breve">
+          <p class="text-em-breve">MAIS EM BREVE...</p>
+        </div>
       </section>
     </main>
     <footer id="footer2">
       <div class="coluna-logo-footer">
         <img
-          src="../imagens/logos/imagotipo2.webp"
+          src="imagens/logos/imagotipo2.webp"
           alt="Logo ClarTI"
           class="logo-final"
           loading="lazy"
@@ -207,6 +223,6 @@
         <img src="" alt="Projeto em destaque" />
       </div>
     </div>
-    <script src="../scripts/pag-portfolio.js"></script>
+    <script src="scripts/pag-portfolio.js"></script>
   </body>
 </html>
