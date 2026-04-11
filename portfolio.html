@@ -3,279 +3,423 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio | ClarTI</title>
     <meta
       name="description"
-      content="Portfólio da ClarTI com sites profissionais, rápidos e focados em gerar contatos reais. Projetos claros, modernos e pensados para pequenos negócios."
+      content="Portfólio da ClarTI com sites profissionais, rápidos e focados em gerar contatos reais para pequenos negócios."
     />
-
-    <title>Página de Portfólio | ClarTI</title>
-
-    <link
-      rel="shortcut icon"
-      href="imagens/logos/logo1-redonda.png"
-      type="image/x-icon"
-    />
-
-    <!-- Fonte otimizada -->
+    <meta name="theme-color" content="#050f1e" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="styles/style.css" />
-    <link rel="stylesheet" href="styles/style-portfolio.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles/style-portfolio.css">
+    
   </head>
   <body>
-    <header class="header">
-      <div class="logo-header">
-        <a href="index.html" class="link-home-header">
-          <img
-            src="imagens/logos/isotipo2.webp"
-            alt="Logo"
-            class="img-header"
-            width="40"
-            height="40"
-          />
-          <p class="tit-header">ClarTI</p>
-        </a>
-      </div>
+    <div class="grid-bg"></div>
+    <div class="glow-orb a"></div>
+    <div class="glow-orb b"></div>
+
+    <!-- NAV -->
+    <nav>
+      <a href="index.html" class="nav-logo"
+        >ClarTI<span class="dot"></span
+      ></a>
       <button
-        class="button-menu"
-        onclick="mostrarMenu()"
-        alt="Botão de Mostrar Menu"
+        class="hamburger"
+        id="ham"
+        onclick="toggleMenu()"
+        aria-label="Menu"
       >
-        <img
-          src="imagens/elements/icons/menu.svg"
-          alt="Menu"
-          width="32"
-          height="32"
-        />
+        <span></span><span></span><span></span>
       </button>
-      <nav class="nav">
-        <ul>
-          <li class="li-home">
-            <a href="index.html" class="item-li">Home</a>
-          </li>
-          <li class="li-servicos">
-            <a href="index.html#servicos" class="item-li">Serviços</a>
-          </li>
-          <li class="li-precos">
-            <a href="index.html#precos" class="item-li">Preços</a>
-          </li>
-          <li class="li-contato">
-            <a href="index.html#footer" class="item-li">Contato</a>
-          </li>
-        </ul>
-      </nav>
+      <ul class="nav-links" id="navLinks">
+        <li>
+          <a href="index.html#servicos" onclick="closeMenu()">Serviços</a>
+        </li>
+        <li>
+          <a href="portfolio.html" class="active" onclick="closeMenu()"
+            >Portfólio</a
+          >
+        </li>
+        <li><a href="index.html#precos" onclick="closeMenu()">Preços</a></li>
+        <li><a href="index.html#contato" onclick="closeMenu()">Contato</a></li>
+      </ul>
       <a
-        href="https://wa.me/5581985187208?text=Olá! Gostaria de saber mais sobre os serviços da ClarTI"
-        class="btn-cta-header"
-        alt="Botão Principal de Falar Conosco no WhatsApp"
-        width="28"
-        height="28"
+        href="https://wa.me/5581985187208?text=Olá! Gostaria de saber mais sobre a ClarTI"
+        class="nav-btn"
+        target="_blank"
         >Fale conosco</a
       >
-    </header>
+    </nav>
 
-    <main>
-      <section class="projetos">
-        <div class="box-text-projetos">
-          <h1 class="tit-projetos">Nossos Projetos</h1>
-          <p class="subtit-projetos">Confira alguns dos nossos trabalhos</p>
-        </div>
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <a href="index.html" class="back-link">
+        <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6" /></svg>
+        Voltar para Home
+      </a>
+      <div class="section-label">Portfólio</div>
+      <h1>Nossos projetos</h1>
+      <p>
+        Sites reais desenvolvidos para negócios que queriam mais presença
+        digital, credibilidade e contatos.
+      </p>
+    </div>
 
+    <!-- GRID -->
+    <div class="portfolio-section">
+      <div class="port-grid">
         <!-- CARD 1 -->
-        <div class="box-imgs-projetos reveal">
-          <h2 class="tit-card-projeto">Paulo Carvalho</h2>
-          <div class="card-img-projetos">
-            <img
-              src="imagens/pag-portfolio/siteDoPaulo.png"
-              alt="Wireframe da AureaLex Advocacia"
-              class="img-projeto"
-              width="265"
-              height="680"
-              fetchpriority="high"
-            />
-          </div>
-          <div class="btn-exibir">
-            <button
-              onclick="
-                exibirCardPort('imagens/pag-portfolio/siteDoPaulo.png')
-              "
-            >
-              Exibir
-            </button>
-          </div>
-        </div>
+      
+
         <!-- CARD 2 -->
-        <div class="box-imgs-projetos reveal">
-          <h2 class="tit-card-projeto">
-            <a href="https://limathays.com">Thays Lima</a> - Estrategista de Conteúdo
-          </h2>
-          <div class="card-img-projetos">
+        <div
+          class="port-card reveal"
+          onclick="
+            abrirModal(
+              'Thays Lima',
+              'imagens/pag-portfolio/thayslima.jpg',
+              'Estrategista de Conteúdo',
+              'Site de apresentação',
+              'https://limathays.com',
+            )
+          "
+        >
+          <div class="port-thumb">
             <img
               src="imagens/pag-portfolio/thayslima.jpg"
-              alt="Wireframe da AureaLex Advocacia"
-              class="img-projeto"
-              width="265"
-              height="680"
-              fetchpriority="high"
+              alt="Site Thays Lima"
+              loading="eager"
             />
+            <div class="port-overlay">
+              <button class="overlay-btn">
+                <svg viewBox="0 0 24 24">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+                Ver projeto
+              </button>
+            </div>
           </div>
-          <div class="btn-exibir">
-            <button
-              onclick="exibirCardPort('imagens/pag-portfolio/thayslima.jpg')"
-            >
-              Exibir
-            </button>
+          <div class="port-info">
+            <h2>Thays Lima</h2>
+            <p style="font-size: 0.83rem; color: var(--muted)">
+              Estrategista de Conteúdo
+            </p>
+            <div class="port-meta">
+              <span class="port-type">Site de apresentação</span>
+              <a
+                href="https://limathays.com"
+                class="port-link"
+                target="_blank"
+                onclick="event.stopPropagation()"
+              >
+                limathays.com
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"
+                  />
+                  <polyline points="15 3 21 3 21 9" />
+                  <line x1="10" y1="14" x2="21" y2="3" />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
+
         <!-- CARD 3 -->
-        <div class="box-imgs-projetos reveal">
-          <h2 class="tit-card-projeto">AureaLex Advocacia</h2>
-          <div class="card-img-projetos">
+        <div
+          class="port-card reveal"
+          onclick="
+            abrirModal(
+              'AureaLex Advocacia',
+              'imagens/pag-portfolio/aurealex-advocacia.webp',
+              'Escritório de advocacia',
+              'Site institucional',
+              '',
+            )
+          "
+        >
+          <div class="port-thumb">
             <img
               src="imagens/pag-portfolio/aurealex-advocacia.webp"
-              alt="Wireframe da AureaLex Advocacia"
-              class="img-projeto"
-              width="265"
-              height="680"
-              fetchpriority="high"
+              alt="Site AureaLex Advocacia"
+              loading="lazy"
             />
+            <div class="port-overlay">
+              <button class="overlay-btn">
+                <svg viewBox="0 0 24 24">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+                Ver projeto
+              </button>
+            </div>
           </div>
-          <div class="btn-exibir">
-            <button
-              onclick="
-                exibirCardPort('imagens/pag-portfolio/aurealex-advocacia.webp')
-              "
-            >
-              Exibir
-            </button>
+          <div class="port-info">
+            <h2>AureaLex Advocacia</h2>
+            <p style="font-size: 0.83rem; color: var(--muted)">
+              Escritório de advocacia
+            </p>
+            <div class="port-meta">
+              <span class="port-type">Site institucional</span>
+            </div>
           </div>
         </div>
+
         <!-- CARD 4 -->
-        <div class="box-imgs-projetos reveal">
-          <h2 class="tit-card-projeto">Lúmina Imóveis</h2>
-          <div class="card-img-projetos">
+        <div
+          class="port-card reveal"
+          onclick="
+            abrirModal(
+              'Lúmina Imóveis',
+              'imagens/pag-portfolio/lumina-imoveis.webp',
+              'Imobiliária',
+              'Site institucional',
+              '',
+            )
+          "
+        >
+          <div class="port-thumb">
             <img
               src="imagens/pag-portfolio/lumina-imoveis.webp"
-              alt="Wireframe da Lúmina Imóveis"
-              class="img-projeto"
-              width="265"
-              height="680"
+              alt="Site Lúmina Imóveis"
+              loading="lazy"
             />
+            <div class="port-overlay">
+              <button class="overlay-btn">
+                <svg viewBox="0 0 24 24">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+                Ver projeto
+              </button>
+            </div>
           </div>
-          <div class="btn-exibir">
-            <button
-              onclick="
-                exibirCardPort('imagens/pag-portfolio/lumina-imoveis.webp')
-              "
-            >
-              Exibir
-            </button>
+          <div class="port-info">
+            <h2>Lúmina Imóveis</h2>
+            <p style="font-size: 0.83rem; color: var(--muted)">Imobiliária</p>
+            <div class="port-meta">
+              <span class="port-type">Site institucional</span>
+            </div>
           </div>
         </div>
+
         <!-- CARD 5 -->
-        <div class="box-imgs-projetos reveal">
-          <h2 class="tit-card-projeto">Nexum Contabilidade</h2>
-          <div class="card-img-projetos">
+        <div
+          class="port-card reveal"
+          onclick="
+            abrirModal(
+              'Nexum Contabilidade',
+              'imagens/pag-portfolio/nexum-contabilidade.webp',
+              'Escritório de contabilidade',
+              'Site institucional',
+              '',
+            )
+          "
+        >
+          <div class="port-thumb">
             <img
               src="imagens/pag-portfolio/nexum-contabilidade.webp"
-              alt="Wireframe da Nexum Contabilidade"
-              class="img-projeto"
-              width="265"
-              height="680"
+              alt="Site Nexum Contabilidade"
+              loading="lazy"
             />
+            <div class="port-overlay">
+              <button class="overlay-btn">
+                <svg viewBox="0 0 24 24">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+                Ver projeto
+              </button>
+            </div>
           </div>
-          <div class="btn-exibir">
-            <button
-              onclick="
-                exibirCardPort('imagens/pag-portfolio/nexum-contabilidade.webp')
-              "
-            >
-              Exibir
-            </button>
+          <div class="port-info">
+            <h2>Nexum Contabilidade</h2>
+            <p style="font-size: 0.83rem; color: var(--muted)">
+              Escritório de contabilidade
+            </p>
+            <div class="port-meta">
+              <span class="port-type">Site institucional</span>
+            </div>
           </div>
         </div>
-        <div class="em-breve">
-          <p class="text-em-breve">MAIS EM BREVE...</p>
-        </div>
-      </section>
-    </main>
-    <footer id="footer2">
-      <div class="coluna-logo-footer">
-        <img
-          src="imagens/logos/imagotipo2.webp"
-          alt="Logo ClarTI"
-          class="logo-final"
-          loading="lazy"
-          width="80"
-          height="80"
-        />
-        <h3 class="tit-footer">Tecnologia com Clareza</h3>
-      </div>
-      <div class="box-das-colunas">
-        <div class="colunas-footer coluna-servico">
-          <h3 class="footer-servicos">Serviços</h3>
-          <ul>
-            <li>
-              <a
-                href="https://wa.me/5581985187208?text=Olá! Gostaria de um orçamento para Site Institucional"
-                target="_blank"
-                >Site institucional</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://wa.me/5581985187208?text=Olá! Gostaria de um orçamento para Landing Page"
-                target="_blank"
-                >Landing page</a
-              >
-            </li>
 
-            <li>
-              <a
-                href="https://wa.me/5581985187208?text=Olá! Gostaria de saber mais sobre SEO e Google"
-                target="_blank"
-                >SEO e Google</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://wa.me/5581985187208?text=Olá! Gostaria de contratar Manutenção Mensal"
-                target="_blank"
-                >Manutenção mensal</a
-              >
-            </li>
-          </ul>
+        <!-- EM BREVE -->
+        <div class="em-breve reveal">
+          <p>Mais projetos em breve...</p>
         </div>
-        <div class="colunas-footer coluna-navegacao">
-          <h3 class="footer-navegacao">Navegação</h3>
-          <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#precos">Preços</a></li>
-            <li><a href="#solucao">Sobre a ClarTI</a></li>
-          </ul>
-        </div>
-        <div class="colunas-footer coluna-contato">
-          <h3 class="footer-contato">Fale com a ClarTI</h3>
-          <p>agencia.clarti@gmail.com</p>
-          <p>(81) 98518-7208</p>
-        </div>
-      </div>
-
-      <div class="copy-final">
-        <p>© 2026 ClarTI. Todos os direitos reservados.</p>
-      </div>
-    </footer>
-    <div class="modal" id="modalProjeto">
-      <div class="modal-content">
-        <p class="modal-close" onclick="fecharModal()"><img src="imagens/elements/icons/excluir.png" alt="X"></p>
-        
       </div>
     </div>
-    <script src="scripts/pag-portfolio.js"></script>
+
+    <!-- MODAL -->
+    <div
+      class="modal-overlay"
+      id="modalOverlay"
+      onclick="fecharModalFora(event)"
+    >
+      <div class="modal-box" id="modalBox">
+        <div class="modal-header">
+          <h3 id="modalTitulo"></h3>
+          <button class="modal-close" onclick="fecharModal()">
+            <svg viewBox="0 0 24 24">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
+        <div class="modal-body" id="modalBody"></div>
+        <div class="modal-footer">
+          <p id="modalDesc"></p>
+          <a id="modalWpp" href="#" class="modal-wpp" target="_blank">
+            <svg width="14" height="14" fill="var(--blue)" viewBox="0 0 24 24">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
+              />
+              <path
+                d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.118 1.528 5.849L0 24l6.335-1.499A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-4.964-1.349l-.356-.212-3.764.89.957-3.664-.232-.376A9.818 9.818 0 0112 2.182c5.314 0 9.818 4.504 9.818 9.818 0 5.315-4.504 9.818-9.818 9.818z"
+              />
+            </svg>
+            Quero um site assim
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <h3>ClarTI</h3>
+            <p>
+              Sites profissionais para pequenos e médios negócios em todo o
+              Brasil.
+            </p>
+            <a
+              href="https://wa.me/5581985187208"
+              class="footer-wpp"
+              target="_blank"
+            >
+              <svg
+                width="14"
+                height="14"
+                fill="var(--cyan)"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
+                />
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.118 1.528 5.849L0 24l6.335-1.499A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-4.964-1.349l-.356-.212-3.764.89.957-3.664-.232-.376A9.818 9.818 0 0112 2.182c5.314 0 9.818 4.504 9.818 9.818 0 5.315-4.504 9.818-9.818 9.818z"
+                />
+              </svg>
+              (81) 98518-7208
+            </a>
+          </div>
+          <div class="footer-col">
+            <h4>Serviços</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://wa.me/5581985187208?text=Orçamento: Site Institucional"
+                  target="_blank"
+                  >Site institucional</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/5581985187208?text=Orçamento: Landing Page"
+                  target="_blank"
+                  >Landing page</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/5581985187208?text=Orçamento: SEO"
+                  target="_blank"
+                  >SEO e Google</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/5581985187208?text=Orçamento: Manutenção"
+                  target="_blank"
+                  >Manutenção mensal</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Navegação</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="portfolio.html">Portfólio</a></li>
+              <li><a href="index.html#precos">Preços</a></li>
+              <li><a href="index.html#contato">Contato</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contato</h4>
+            <p>agencia.clarti@gmail.com</p>
+            <p style="margin-top: 8px">(81) 98518-7208</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 ClarTI. Todos os direitos reservados.</p>
+          <p>Tecnologia com Clareza</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        document.getElementById("ham").classList.toggle("open");
+        document.getElementById("navLinks").classList.toggle("open");
+      }
+      function closeMenu() {
+        document.getElementById("ham").classList.remove("open");
+        document.getElementById("navLinks").classList.remove("open");
+      }
+
+      // Modal
+      function abrirModal(nome, img, desc, tipo, link) {
+        document.getElementById("modalTitulo").textContent =
+          nome + " — " + tipo;
+        document.getElementById("modalDesc").textContent = desc;
+        document.getElementById("modalBody").innerHTML =
+          '<img src="' + img + '" alt="' + nome + '">';
+        document.getElementById("modalWpp").href =
+          "https://wa.me/5581985187208?text=Olá! Vi o projeto " +
+          encodeURIComponent(nome) +
+          " no portfólio e quero um site assim!";
+        document.getElementById("modalOverlay").classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
+      function fecharModal() {
+        document.getElementById("modalOverlay").classList.remove("open");
+        document.body.style.overflow = "";
+      }
+      function fecharModalFora(e) {
+        if (e.target === document.getElementById("modalOverlay")) fecharModal();
+      }
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") fecharModal();
+      });
+
+      // Reveal
+      const ro = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e, i) => {
+            if (e.isIntersecting) {
+              setTimeout(() => e.target.classList.add("visible"), i * 80);
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+      document.querySelectorAll(".reveal").forEach((el) => ro.observe(el));
+    </script>
   </body>
 </html>

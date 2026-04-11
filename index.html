@@ -1,678 +1,615 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Criação de Sites Profissionais para Empresas | ClarTI</title>
-
-    <meta name="theme-color" content="#11486e" />
+    <title>ClarTI — Sites que geram contatos reais</title>
     <meta
       name="description"
-      content="Criação de sites profissionais claros e rápidos em Caruaru e em todo o Brasil. A ClarTI desenvolve sites modernos focados em gerar contatos reais. Solicite um orçamento."
+      content="A ClarTI cria sites profissionais, rápidos e focados em conversão para pequenos e médios negócios em todo o Brasil."
     />
-
+    <meta name="theme-color" content="#050f1e" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Ubuntu:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
     <link
       rel="shortcut icon"
       href="imagens/logos/logo1-redonda.png"
       type="image/x-icon"
     />
-
-    <!-- Fonte otimizada -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="styles/style.css?v=1.0.5" />
   </head>
-
   <body>
-    <header class="header">
-      <div class="logo-header">
-        <a href="#" class="link-home-header">
-          <img
-            src="imagens/logos/isotipo2.webp"
-            alt="Logo"
-            class="img-header"
-            width="40"
-            height="40"
-          />
-          <p class="tit-header">ClarTI</p>
-        </a>
-      </div>
+    <div class="grid-bg"></div>
+    <div class="glow-orb a"></div>
+    <div class="glow-orb b"></div>
+
+    <!-- NAV -->
+    <nav>
+      <a href="#" class="nav-logo">ClarTI<span class="dot"></span></a>
       <button
-        class="button-menu"
-        onclick="mostrarMenu()"
-        alt="Botão de Mostrar Menu"
+        class="hamburger"
+        id="ham"
+        onclick="toggleMenu()"
+        aria-label="Menu"
       >
-        <img
-          src="imagens/elements/icons/menu.svg"
-          alt="Menu"
-          width="32"
-          height="32"
-        />
+        <span></span><span></span><span></span>
       </button>
-      <nav class="nav">
-        <ul>
-          <li class="li-servicos">
-            <a href="#servicos" class="item-li">Serviços</a>
-          </li>
-          <li class="li-portfolio">
-            <a href="portfolio.html" class="item-li">Portfólio</a>
-          </li>
-          <li class="li-precos">
-            <a href="#precos" class="item-li">Preços</a>
-          </li>
-          <li class="li-contato">
-            <a href="#footer" class="item-li">Contato</a>
-          </li>
-        </ul>
-      </nav>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#servicos" onclick="closeMenu()">Serviços</a></li>
+        <li><a href="portfolio.html" onclick="closeMenu()">Portfólio</a></li>
+        <li><a href="#precos" onclick="closeMenu()">Preços</a></li>
+        <li><a href="#contato" onclick="closeMenu()">Contato</a></li>
+      </ul>
       <a
-        href="https://wa.me/5581985187208?text=Olá! Gostaria de saber mais sobre os serviços da ClarTI"
-        class="btn-cta-header"
-        alt="Botão Principal de Falar Conosco no WhatsApp"
-        width="28"
-        height="28"
+        href="https://wa.me/5581985187208?text=Olá! Gostaria de saber mais sobre a ClarTI"
+        class="nav-btn"
+        target="_blank"
         >Fale conosco</a
       >
-    </header>
+    </nav>
 
-    <main>
-      <section class="hero-section" id="hero">
-        <!-- IMAGEM LCP: detectável imediatamente -->
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <div class="hero-tag">
+            <span class="tag-dot"></span>Criação de sites profissionais
+          </div>
+          <h1>Seu negócio<br />merece um site<br />que <em>converte</em></h1>
+          <p class="hero-sub">
+            A ClarTI cria sites rápidos, claros e pensados para gerar contatos
+            reais para pequenos e médios negócios em todo o Brasil.
+          </p>
+          <div class="hero-btns">
+            <a
+              href="https://wa.me/5581985187208?text=Olá! Gostaria de saber mais sobre a ClarTI"
+              class="btn-primary"
+              target="_blank"
+            >
+              <svg
+                class="wpp-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
+                />
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.118 1.528 5.849L0 24l6.335-1.499A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-4.964-1.349l-.356-.212-3.764.89.957-3.664-.232-.376A9.818 9.818 0 0112 2.182c5.314 0 9.818 4.504 9.818 9.818 0 5.315-4.504 9.818-9.818 9.818z"
+                />
+              </svg>
+              Falar no WhatsApp
+            </a>
+            <a href="portfolio.html" class="btn-secondary">Ver projetos →</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <div class="hc-header">
+              <div class="hc-dots">
+                <span class="r"></span><span class="y"></span
+                ><span class="g"></span>
+              </div>
+              <div class="hc-url">seusite.com.br</div>
+            </div>
+            <div class="hc-img">
+              <div class="hc-img-inner">
+                <div class="hc-bar"></div>
+                <div class="hc-bar short"></div>
+                <div class="hc-bar tiny"></div>
+                <div class="hc-blocks">
+                  <div class="hc-block"></div>
+                  <div class="hc-block"></div>
+                </div>
+              </div>
+            </div>
+            <div class="hc-stats">
+              <div class="hc-stat">
+                <div class="n">98</div>
+                <div class="l">Performance</div>
+              </div>
+              <div class="hc-stat">
+                <div class="n">4.2s</div>
+                <div class="l">Entrega</div>
+              </div>
+              <div class="hc-stat">
+                <div class="n" style="color: var(--cyan)">↑34%</div>
+                <div class="l">Contatos</div>
+              </div>
+            </div>
+            <div class="badge-float">✦ Site no ar em dias</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <img
-          src="imagens/elements/mesh-gradient.webp"
-          alt="Imagem do plano de fundo"
-          class="hero-bg"
-          width="1920"
-          height="1080"
-          loading="eager"
-          fetchpriority="high"
-          decoding="async"
-        />
+    <!-- PROBLEMA -->
+    <section class="problema reveal" id="problema">
+      <div class="section-wrap">
+        <div class="section-label">O problema</div>
+        <div class="problema-grid">
+          <div>
+            <h2 class="section-title">
+              Sem site, você perde clientes todos os dias
+            </h2>
+            <p class="section-sub">
+              Depender só de redes sociais e indicações tem limite. Quem te
+              procura no Google não te encontra — e vai para a concorrência.
+            </p>
+            <div class="dor-list" style="margin-top: 32px">
+              <div class="dor-item">
+                <div class="dor-icon">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                    <line x1="8" y1="11" x2="14" y2="11" />
+                  </svg>
+                </div>
+                <div class="dor-text">
+                  <h3>Invisível no Google</h3>
+                  <p>
+                    Clientes buscam por serviços como o seu todos os dias e você
+                    não aparece.
+                  </p>
+                </div>
+              </div>
+              <div class="dor-item">
+                <div class="dor-icon">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"
+                    />
+                    <line x1="12" y1="9" x2="12" y2="13" />
+                    <line x1="12" y1="17" x2="12.01" y2="17" />
+                  </svg>
+                </div>
+                <div class="dor-text">
+                  <h3>Passa pouca credibilidade</h3>
+                  <p>
+                    Negócio sem site parece menos profissional — e o cliente
+                    sente isso.
+                  </p>
+                </div>
+              </div>
+              <div class="dor-item">
+                <div class="dor-icon">
+                  <svg viewBox="0 0 24 24">
+                    <line x1="18" y1="20" x2="18" y2="10" />
+                    <line x1="12" y1="20" x2="12" y2="4" />
+                    <line x1="6" y1="20" x2="6" y2="14" />
+                    <line x1="2" y1="20" x2="22" y2="20" />
+                  </svg>
+                </div>
+                <div class="dor-text">
+                  <h3>Sem dados para crescer</h3>
+                  <p>
+                    Você não sabe de onde vêm seus clientes nem o que funciona
+                    no digital.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="stat-box">
+            <div class="big-stat">
+              <div class="n">75%</div>
+              <div class="desc">
+                dos consumidores julgam a credibilidade de um negócio pelo site
+              </div>
+            </div>
+            <div class="divider-stat"></div>
+            <div class="big-stat">
+              <div class="n" style="color: var(--cyan)">3×</div>
+              <div class="desc">
+                mais contatos gerados por sites com foco em conversão
+              </div>
+            </div>
+            <div class="divider-stat"></div>
+            <div class="big-stat">
+              <div class="n">+50mi</div>
+              <div class="desc">
+                de buscas por negócios locais acontecem todo mês no Google
+                Brasil
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <h1 class="tit-hero-section">
-          Sites profissionais preparados para gerar contatos para pequenas e
-          médias empresas
-        </h1>
+    <!-- SERVIÇOS -->
+    <section class="servicos reveal" id="servicos">
+      <div class="section-wrap">
+        <div class="section-label">O que fazemos</div>
+        <h2 class="section-title">
+          Soluções para colocar seu<br />negócio no digital
+        </h2>
+        <div class="servicos-grid">
+          <div class="serv-card">
+            <div class="serv-num">01</div>
+            <h3>Site Institucional</h3>
+            <p>
+              Apresente sua empresa com clareza e profissionalismo. Perfeito
+              para negócios que querem credibilidade e aparecer no Google.
+            </p>
+            <span class="serv-price">A partir de R$ 649</span>
+          </div>
+          <div class="serv-card">
+            <div class="serv-num">02</div>
+            <h3>Landing Page</h3>
+            <p>
+              Uma página com foco total em converter visitante em contato. Ideal
+              para campanhas, lançamentos e serviços específicos.
+            </p>
+            <span class="serv-price">A partir de R$ 497</span>
+          </div>
+          <div class="serv-card">
+            <div class="serv-num">03</div>
+            <h3>SEO Básico + Google</h3>
+            <p>
+              Configuração para seu site aparecer nas buscas relevantes do
+              Google. Mais visibilidade orgânica, mais alcance.
+            </p>
+            <span class="serv-price">A partir de R$ 249/mês</span>
+          </div>
+          <div class="serv-card">
+            <div class="serv-num">04</div>
+            <h3>Manutenção Mensal</h3>
+            <p>
+              Atualizações, suporte técnico e segurança contínua. Você foca no
+              seu negócio, a ClarTI cuida do site.
+            </p>
+            <span class="serv-price">A partir de R$ 179/mês</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <p class="subtit-hero-section">
-          A ClarTI desenvolve sites claros, rápidos e focados em conversão, para
-          empresas que querem presença digital sem complicação.
+    <!-- PORTFÓLIO -->
+    <section class="portfolio reveal" id="portfolio">
+      <div class="section-wrap">
+        <div class="section-label">Portfólio</div>
+        <h2 class="section-title">Projetos desenvolvidos</h2>
+        <p class="section-sub">
+          Sites feitos para gerar resultados para negócios como o seu.
         </p>
+        <div class="portfolio-grid">
+          <div class="port-card">
+            <div class="port-thumb">
+              <img
+                src="imagens/mockups/erondi-mockup.webp"
+                alt="Site do Erondi"
+              />
+            </div>
+            <div class="port-info">
+              <h3>Erondi Corretor</h3>
+              <p>Corretor de imóveis</p>
+              <span class="port-badge">Página de vendas</span>
+            </div>
+          </div>
+          <div class="port-card">
+            <div class="port-thumb">
+              <div class="port-thumb">
+                <img
+                  src="imagens/mockups/doces-belli-mockup.webp"
+                  alt="Site do Erondi"
+                />
+              </div>
+            </div>
+            <div class="port-info">
+              <h3>Doces Belli</h3>
+              <p>Confeitaria artesanal</p>
+              <span class="port-badge">Página de vendas</span>
+            </div>
+          </div>
+          <div class="port-card">
+            <div class="port-thumb">
+              <div class="port-thumb">
+                <img
+                  src="imagens/mockups/joalheria-mockup.webp"
+                  alt="Site do Erondi"
+                />
+              </div>
+            </div>
+            <div class="port-info">
+              <h3>Joalheria Lumière</h3>
+              <p>Joias e acessórios</p>
+              <span class="port-badge">Página de vendas</span>
+            </div>
+          </div>
+          <div class="port-card">
+            <div class="port-thumb">
+              <div class="port-thumb" id="port-thumb4">
+                <img
+                  src="imagens/mockups/erison-montagens-mockup.webp"
+                  alt="Site do Erondi"
+                />
+              </div>
+            </div>
+            <div class="port-info">
+              <h3>Erison Montagens</h3>
+              <p>Montagem de móveis</p>
+              <span class="port-badge">Página de vendas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <div class="botoes-hero-section">
+    <!-- PREÇOS -->
+    <section class="precos reveal" id="precos">
+      <div class="section-wrap">
+        <div class="section-label">Investimento</div>
+        <h2 class="section-title">Preços claros,<br />sem surpresas</h2>
+        <div class="precos-grid">
+          <div class="preco-card">
+            <h3>Manutenção Mensal</h3>
+            <div class="valor">R$ 179<span>/mês</span></div>
+            <p>
+              Atualizações, suporte e segurança contínua para seu site ficar
+              sempre no ar e funcionando.
+            </p>
+            <a
+              href="https://wa.me/5581985187208?text=Olá! Quero saber mais sobre Manutenção Mensal"
+              class="preco-btn outline"
+              target="_blank"
+              >Quero um orçamento</a
+            >
+          </div>
+          <div class="preco-card destaque">
+            <span class="preco-popular">Mais pedido</span>
+            <h3>Site Institucional</h3>
+            <div class="valor">R$ 649<span> único</span></div>
+            <p>
+              Site completo, rápido e otimizado para o Google. Entregue em
+              poucos dias, pronto para gerar contatos.
+            </p>
+            <a
+              href="https://wa.me/5581985187208?text=Olá! Quero saber mais sobre o Site Institucional"
+              class="preco-btn filled"
+              target="_blank"
+              >Quero um orçamento</a
+            >
+          </div>
+          <div class="preco-card">
+            <h3>Landing Page</h3>
+            <div class="valor">R$ 497<span> único</span></div>
+            <p>
+              Página de alta conversão focada em levar o visitante direto para o
+              WhatsApp ou formulário de contato.
+            </p>
+            <a
+              href="https://wa.me/5581985187208?text=Olá! Quero saber mais sobre Landing Page"
+              class="preco-btn outline"
+              target="_blank"
+              >Quero um orçamento</a
+            >
+          </div>
+          <div class="preco-card">
+            <h3>SEO + Google</h3>
+            <div class="valor">R$ 249<span>/mês</span></div>
+            <p>
+              Otimização para aparecer no Google e atrair clientes que já estão
+              buscando pelo seu serviço.
+            </p>
+            <a
+              href="https://wa.me/5581985187208?text=Olá! Quero saber mais sobre SEO e Google"
+              class="preco-btn outline"
+              target="_blank"
+              >Quero um orçamento</a
+            >
+          </div>
+        </div>
+        <p class="preco-obs">
+          Os valores variam conforme a complexidade. Tudo é alinhado antes de
+          começar.
+        </p>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS -->
+    <section class="diferenciais reveal">
+      <div class="section-wrap">
+        <div class="section-label">Por que a ClarTI</div>
+        <h2 class="section-title">Do jeito que deveria ser</h2>
+        <div class="dif-grid">
+          <div class="dif-card">
+            <div class="dif-icon-wrap">
+              <svg viewBox="0 0 24 24">
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </div>
+            <h3>Entrega rápida</h3>
+            <p>
+              Seu site no ar em dias, não meses. Processo ágil, sem enrolação.
+            </p>
+          </div>
+          <div class="dif-card">
+            <div class="dif-icon-wrap">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"
+                />
+              </svg>
+            </div>
+            <h3>Comunicação clara</h3>
+            <p>
+              Sem termos técnicos complicados. Você entende cada etapa do
+              processo.
+            </p>
+          </div>
+          <div class="dif-card">
+            <div class="dif-icon-wrap">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="8" x2="12" y2="12" />
+                <line x1="12" y1="16" x2="12.01" y2="16" />
+              </svg>
+            </div>
+            <h3>Transparência total</h3>
+            <p>Preço definido antes de começar. Zero surpresas no bolso.</p>
+          </div>
+          <div class="dif-card">
+            <div class="dif-icon-wrap">
+              <svg viewBox="0 0 24 24">
+                <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+              </svg>
+            </div>
+            <h3>Foco em resultado</h3>
+            <p>
+              Sites feitos para gerar contatos reais, não só para parecer
+              bonito.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-final reveal" id="contato">
+      <div class="cta-box">
+        <h2>Pronto para ter um site que trabalha por você?</h2>
+        <p>
+          Vamos conversar sem compromisso. Explique o que seu negócio precisa e
+          receba uma proposta clara.
+        </p>
+        <div class="cta-btns">
           <a
-            href="https://wa.me/5581985187208?text=Olá! Gostaria de saber mais sobre os serviços da ClarTI"
-            class="cta-hero-section"
+            href="https://wa.me/5581985187208?text=Olá! Gostaria de saber mais sobre a ClarTI"
+            class="btn-primary"
+            target="_blank"
           >
-            Falar com a ClarTI no WhatsApp
-            <img
-              src="imagens/elements/icons/whatsapp.svg"
-              alt="Ícone do WhatsApp"
-              width="30"
-              height="40"
-            />
+            <svg
+              class="wpp-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
+              />
+              <path
+                d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.118 1.528 5.849L0 24l6.335-1.499A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-4.964-1.349l-.356-.212-3.764.89.957-3.664-.232-.376A9.818 9.818 0 0112 2.182c5.314 0 9.818 4.504 9.818 9.818 0 5.315-4.504 9.818-9.818 9.818z"
+              />
+            </svg>
+            Falar no WhatsApp
           </a>
-
-          <a href="portfolio.html" class="portfolio-hero-section"> Ver Portfólio </a>
-        </div>
-
-        <div class="div-img-hero">
-          <img
-            src="imagens/mockups/hero-img-mockup-gran.webp"
-            width="600"
-            height="377"
-            alt="Mockup de site profissional desenvolvido pela ClarTI"
-            class="img-hero"
-            loading="eager"
-            fetchpriority="high"
-            decoding="async"
-          />
-        </div>
-      </section>
-
-      <section class="problema reveal">
-        <h2 class="tit-problema">
-          <span class="destaque-tit-problema">Hoje,</span><br />
-          negócios sem site perdem oportunidades todos os dias
-        </h2>
-        <p class="text-problema">
-          Muitos ainda dependem apenas de redes sociais e indicações, não
-          aparecem no Google e não sabem se o digital realmente traz resultados.
-        </p>
-        <div class="bullets-dores">
-          <div class="bullet1">
-            <img
-              src="imagens/elements/icons/globe-off.svg"
-              alt="Ícone de sem site"
-              width="40"
-              height="40"
-            />
-            <p class="desc-bullet1">Não tem um site profissional</p>
-          </div>
-          <div class="bullet2">
-            <img
-              src="imagens/elements/icons/search-off.svg"
-              alt="Ícone de sem pesquisa"
-              width="40"
-              height="40"
-            />
-            <p class="desc-bullet2">Não aparece em pesquisas</p>
-          </div>
-          <div class="bullet3">
-            <img
-              src="imagens/elements/icons/no-analytics.svg"
-              alt="Ícone de sem análise"
-              width="40"
-              height="40"
-            />
-            <p class="desc-bullet3">Não tem dados relevantes</p>
-          </div>
-        </div>
-      </section>
-      <section class="solucao reveal" id="solucao">
-        <div class="custom-shape-divider-top-1766184094">
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
-              class="shape-fill"
-            ></path>
-          </svg>
-        </div>
-        <div class="box-titulos-solucao">
-          <h2 class="tit-solucao">
-            Sites pensados para facilitar sua vida e gerar contatos
-          </h2>
-          <p class="subtit-solucao">
-            Você não precisa entender de tecnologia. A ClarTI cuida da parte
-            técnica, enquanto você sabe exatamente o que está sendo feito,
-            quanto está investindo e o que esperar do seu site.
-          </p>
-        </div>
-        <div class="box-solucoes">
-          <div class="card-solucoes">
-            <h3 class="tit-solucoes">Seu negócio fácil de encontrar</h3>
-            <p class="desc-solucao">
-              Estrutura preparada para que clientes encontrem sua empresa no
-              Google e entrem em contato com facilidade.
-            </p>
-          </div>
-          <div class="card-solucoes">
-            <h3 class="tit-solucoes">Mais contatos, menos confusão</h3>
-            <p class="desc-solucao">
-              Sites rápidos e objetivos, feitos para levar o visitante ao
-              WhatsApp ou formulário.
-            </p>
-          </div>
-          <div class="card-solucoes">
-            <h3 class="tit-solucoes">Você entende tudo o que acontece</h3>
-            <p class="desc-solucao">
-              Nada de termos complicados. Explicamos cada etapa de forma simples
-              e clara.
-            </p>
-          </div>
-          <div class="card-solucoes">
-            <h3 class="tit-solucoes">Sem surpresas no investimento</h3>
-            <p class="desc-solucao">
-              Preços claros, escopo definido e zero custos escondidos.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section class="servicos reveal" id="servicos">
-        <div class="box-titulos-servicos">
-          <h2 class="tit-servicos">O que a ClarTI faz</h2>
-          <p class="subtit-servicos">
-            Soluções completas para colocar sua empresa no digital de forma
-            profissional.
-          </p>
-        </div>
-        <div class="box-dos-servicos">
-          <div class="card-servicos">
-            <img
-              src="imagens/elements/icons/layout.svg"
-              alt="Ícone de Site Institucional"
-              class="icon-do-servico"
-              width="50"
-              height="50"
-            />
-            <h3 class="tit-card-servico">Site institucional Profissional</h3>
-            <p class="desc-card-servicos">
-              Apresente sua empresa com credibilidade e clareza.
-            </p>
-          </div>
-          <div class="card-servicos">
-            <img
-              src="imagens/elements/icons/settings.svg"
-              alt="Ícone de manutenção de sites"
-              class="icon-do-servico"
-              width="50"
-              height="50"
-            />
-            <h3 class="tit-card-servico">Manutenção mensal</h3>
-            <p class="desc-card-servicos">
-              Atualizações, suporte e segurança contínua.
-            </p>
-          </div>
-          <div class="card-servicos">
-            <img
-              src="imagens/elements/icons/file-text.svg"
-              alt="Ícone de Landing Page"
-              class="icon-do-servico"
-              width="50"
-              height="50"
-            />
-            <h3 class="tit-card-servico">Landing pages</h3>
-            <p class="desc-card-servicos">
-              Páginas focadas em conversão e geração de contatos.
-            </p>
-          </div>
-
-          <div class="card-servicos">
-            <img
-              src="imagens/elements/icons/seo.svg"
-              alt="Ícone de SEo e Google"
-              class="icon-do-servico"
-              width="50"
-              height="50"
-            />
-            <h3 class="tit-card-servico">SEO Básico + Google</h3>
-            <p class="desc-card-servicos">
-              Faça sua empresa aparecer nas buscas do Google.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section class="portfolio reveal" id="portfolio">
-        <div class="custom-shape-divider-top-1766257136">
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M649.97 0L550.03 0 599.91 54.12 649.97 0z"
-              class="shape-fill"
-            ></path>
-          </svg>
-        </div>
-        <div class="boxs-titulos-portfolio">
-          <h2 class="tit-portfolio">Projetos desenvolvidos</h2>
-          <p class="subtit-portfolio">
-            Alguns sites criados para empresas que buscavam mais presença
-            digital, credibilidade e contatos.
-          </p>
-        </div>
-        <div class="carousel-wrapper">
-          <div class="carousel-container">
-            <button
-              class="carousel-btn btn-prev"
-              onclick="prevSlide()"
-              alt="Botão de Voltar o portfólio"
-            >
-              <img
-                src="imagens/elements/icons/seta-esquerda-escura.svg"
-                alt="Voltar"
-                width="30"
-                height="30"
-              />
-            </button>
-            <button
-              class="carousel-btn btn-next"
-              onclick="nextSlide()"
-              alt="Botão de Próximo portfólio"
-            >
-              <img
-                src="imagens/elements/icons/seta-direita-escura.svg"
-                alt="Próximo"
-                width="30"
-                height="30"
-              />
-            </button>
-            <div class="carousel-track" id="carouselTrack">
-              <div class="box-portfolio">
-                <img
-                  src="imagens/mockups/erondi-mockup-300.webp"
-                  srcset="
-                    imagens/mockups/erondi-mockup-300.webp 300w,
-                    imagens/mockups/erondi-mockup-600.webp 600w
-                  "
-                  sizes="300px"
-                  alt="Imagem do site do cliente"
-                  loading="lazy"
-                  decoding="async"
-                  width="300"
-                  height="150"
-                />
-                <h3 class="tit-card-portfolio">Erondi Corretor</h3>
-                <p class="subtit-card-portfolio">Página de vendas</p>
-              </div>
-
-              <div class="box-portfolio">
-                <img
-                  src="imagens/mockups/doces-belli-300.webp"
-                  srcset="
-                    imagens/mockups/doces-belli-300.webp 300w,
-                    imagens/mockups/doces-belli-600.webp 600w
-                  "
-                  sizes="300px"
-                  alt="Imagem do site do cliente"
-                  loading="lazy"
-                  decoding="async"
-                  width="300"
-                  height="150"
-                />
-                <h3 class="tit-card-portfolio">Doces Belli</h3>
-                <p class="subtit-card-portfolio">Página de vendas</p>
-              </div>
-
-              <div class="box-portfolio">
-                <img
-                  src="imagens/mockups/joalheria-300.webp"
-                  srcset="
-                    imagens/mockups/joalheria-300.webp 300w,
-                    imagens/mockups/joalheria-600.webp 600w
-                  "
-                  sizes="300px"
-                  alt="Imagem do site do cliente"
-                  loading="lazy"
-                  decoding="async"
-                  width="300"
-                  height="150"
-                />
-                <h3 class="tit-card-portfolio">Joalheria Lumière</h3>
-                <p class="subtit-card-portfolio">Página de vendas</p>
-              </div>
-
-              <div class="box-portfolio">
-                <img
-                  src="imagens/mockups/erison-montagens-mockup-300.webp"
-                  srcset="
-                    imagens/mockups/erison-montagens-mockup-300.webp 300w,
-                    imagens/mockups/erison-montagens-mockup-600.webp 600w
-                  "
-                  sizes="300px"
-                  alt="Imagem do site do cliente"
-                  loading="lazy"
-                  decoding="async"
-                  width="300"
-                  height="150"
-                />
-                <h3 class="tit-card-portfolio">Erison Montagens</h3>
-                <p class="subtit-card-portfolio">Página de vendas</p>
-              </div>
-            </div>
-          </div>
-          <div class="carousel-indicators" id="indicators"></div>
-          <div class="box-btn-pag-portfolio">
-            <a href="portfolio.html" class="btn-pag-portfolio"
-              >Ver portfólio</a
-            >
-          </div>
-        </div>
-      </section>
-      <section class="precos reveal" id="precos">
-        <h2 class="tit-precos">Investimento claro, sem surpresas</h2>
-        <div class="carousel-wrapper-precos">
-          <div class="carousel-container-precos">
-            <button
-              class="carousel-btn-precos btn-prev-precos"
-              onclick="prevSlidePrecos()"
-              alt="Botão de Voltar Preço"
-            >
-              <img
-                src="imagens/elements/icons/seta-esquerda-clara.svg"
-                alt="VoltarPreço"
-                width="30"
-                height="30"
-              />
-            </button>
-            <button
-              class="carousel-btn-precos btn-next-precos"
-              onclick="nextSlidePrecos()"
-              alt="Botão de Próximo Preço"
-            >
-              <img
-                src="imagens/elements/icons/seta-direita-clara.svg"
-                alt="PróximoPreço"
-                width="30"
-                height="30"
-              />
-            </button>
-            <div class="carousel-track-precos" id="carouselTrackPrecos">
-              <div class="card-precos">
-                <h3 class="tit-preco-base">Site institucional</h3>
-                <p class="subtit-preco-base">A partir de R$ 649</p>
-                <p class="desc-preco-base">
-                  Ideal para apresentar sua empresa no Google.
-                </p>
-                <a
-                  href="https://wa.me/5581985187208?text=Olá! Quero um orçamento para Site Institucional (a partir de R$ 649)"
-                  class="btn-quero-orcamento"
-                  target="_blank"
-                  >Quero um orçamento</a
-                >
-              </div>
-
-              <div class="card-precos">
-                <h3 class="tit-preco-base">Manutenção mensal</h3>
-                <p class="subtit-preco-base">A partir de R$ 179/mês</p>
-                <p class="desc-preco-base">
-                  Atualizações, suporte e segurança contínua.
-                </p>
-                <a
-                  href="https://wa.me/5581985187208?text=Olá! Quero um orçamento para Manutenção Mensal (a partir de R$ 179/mês)"
-                  class="btn-quero-orcamento"
-                  target="_blank"
-                  >Quero um orçamento</a
-                >
-              </div>
-              <div class="card-precos">
-                <h3 class="tit-preco-base">Landing page</h3>
-                <p class="subtit-preco-base">A partir de R$ 497</p>
-                <p class="desc-preco-base">Foco total em conversão.</p>
-                <a
-                  href="https://wa.me/5581985187208?text=Olá! Quero um orçamento para Landing Page (a partir de R$ 497)"
-                  class="btn-quero-orcamento"
-                  target="_blank"
-                  >Quero um orçamento</a
-                >
-              </div>
-
-              <div class="card-precos">
-                <h3 class="tit-preco-base">SEO Básico + Google</h3>
-                <p class="subtit-preco-base">A partir de R$ 249/mês</p>
-                <p class="desc-preco-base">Otimize sua presença digital.</p>
-                <a
-                  href="https://wa.me/5581985187208?text=Olá! Quero um orçamento para SEO e Google (a partir de R$ 249/mês)"
-                  class="btn-quero-orcamento"
-                  target="_blank"
-                  >Quero um orçamento</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="carousel-indicators-precos" id="indicatorsPrecos"></div>
-        </div>
-        <p class="text-final-precos">
-          Os valores variam conforme a complexidade do projeto. Tudo é alinhado
-          e explicado antes do início.
-        </p>
-      </section>
-      <section class="diferenciais reveal">
-        <div class="custom-shape-divider-top-1766257319">
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
-              class="shape-fill"
-            ></path>
-          </svg>
-        </div>
-        <div class="box-titulos-diferenciais">
-          <h2 class="tit-diferenciais">Por que escolher a ClarTI?</h2>
-        </div>
-        <div class="box-diferenciais">
-          <div class="bullet-diferenciais">
-            <img
-              src="imagens/elements/icons/award.svg"
-              alt="Ícone de medalha/especialidade"
-              loading="lazy"
-              width="60"
-              height="60"
-            />
-            <h3 class="tit-bullet-diferenciais">Especialista técnico</h3>
-          </div>
-          <div class="bullet-diferenciais">
-            <img
-              src="imagens/elements/icons/alvo.svg"
-              alt="Ícone de comunicação clara"
-              loading="lazy"
-              width="60"
-              height="60"
-            />
-            <h3 class="tit-bullet-diferenciais">Comunicação clara</h3>
-          </div>
-          <div class="bullet-diferenciais">
-            <img
-              src="imagens/elements/icons/conversa.svg"
-              alt="Ícone de conversa transparente"
-              loading="lazy"
-              width="60"
-              height="60"
-            />
-            <h3 class="tit-bullet-diferenciais">Transparência total</h3>
-          </div>
-          <div class="bullet-diferenciais">
-            <img
-              src="imagens/elements/icons/check.svg"
-              alt="Ícone de foco em resultado"
-              loading="lazy"
-              width="60"
-              height="60"
-            />
-            <h3 class="tit-bullet-diferenciais">Foco em resultado real</h3>
-          </div>
-        </div>
-        <p class="subtit-diferenciais">
-          Soluções pensadas para pequenas e médias empresas
-        </p>
-      </section>
-      <section class="cta-final reveal">
-        <h2 class="tit-cta-final">
-          Seu negócio precisa de um site profissional
-        </h2>
-        <p class="subtit-cta-final">
-          Vamos conversar e entender sua necessidade. Você recebe uma solução
-          clara, sem complicação e sem pressão.
-        </p>
-        <a
-          href="https://wa.me/5581985187208?text=Olá! Gostaria de saber mais sobre os serviços da ClarTI"
-          class="link-cta-final"
-          target="_blank"
-          >Falar com a ClarTI no WhatsApp</a
-        >
-      </section>
-    </main>
-
-    <footer id="footer">
-      <div class="coluna-logo-footer">
-        <img
-          src="imagens/logos/imagotipo2.webp"
-          alt="Logo ClarTI"
-          class="logo-final"
-          loading="lazy"
-          width="80"
-          height="80"
-        />
-        <h3 class="tit-footer">Tecnologia com Clareza</h3>
-      </div>
-      <div class="box-das-colunas">
-        <div class="colunas-footer coluna-servico">
-          <h3 class="footer-servicos">Serviços</h3>
-          <ul>
-            <li>
-              <a
-                href="https://wa.me/5581985187208?text=Olá! Gostaria de um orçamento para Site Institucional"
-                target="_blank"
-                >Site institucional</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://wa.me/5581985187208?text=Olá! Gostaria de um orçamento para Landing Page"
-                target="_blank"
-                >Landing page</a
-              >
-            </li>
-
-            <li>
-              <a
-                href="https://wa.me/5581985187208?text=Olá! Gostaria de saber mais sobre SEO e Google"
-                target="_blank"
-                >SEO e Google</a
-              >
-            </li>
-            <li>
-              <a
-                href="https://wa.me/5581985187208?text=Olá! Gostaria de contratar Manutenção Mensal"
-                target="_blank"
-                >Manutenção mensal</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="colunas-footer coluna-navegacao">
-          <h3 class="footer-navegacao">Navegação</h3>
-          <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#portfolio">Portfólio</a></li>
-            <li><a href="#precos">Preços</a></li>
-            <li><a href="#solucao">Sobre a ClarTI</a></li>
-          </ul>
-        </div>
-        <div class="colunas-footer coluna-contato">
-          <h3 class="footer-contato">Fale com a ClarTI</h3>
-          <p>agencia.clarti@gmail.com</p>
-          <p>(81) 98518-7208</p>
+          
         </div>
       </div>
+    </section>
 
-      <div class="copy-final">
-        <p>© 2026 ClarTI. Todos os direitos reservados.</p>
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <h3>ClarTI</h3>
+            <p>
+              Sites profissionais para pequenos e médios negócios em todo o
+              Brasil.
+            </p>
+            <a
+              href="https://wa.me/5581985187208"
+              class="footer-wpp"
+              target="_blank"
+            >
+              <svg
+                width="14"
+                height="14"
+                fill="var(--cyan)"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"
+                />
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.118 1.528 5.849L0 24l6.335-1.499A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-4.964-1.349l-.356-.212-3.764.89.957-3.664-.232-.376A9.818 9.818 0 0112 2.182c5.314 0 9.818 4.504 9.818 9.818 0 5.315-4.504 9.818-9.818 9.818z"
+                />
+              </svg>
+              (81) 98518-7208
+            </a>
+          </div>
+          <div class="footer-col">
+            <h4>Serviços</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://wa.me/5581985187208?text=Orçamento: Site Institucional"
+                  target="_blank"
+                  >Site institucional</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/5581985187208?text=Orçamento: Landing Page"
+                  target="_blank"
+                  >Landing page</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/5581985187208?text=Orçamento: SEO"
+                  target="_blank"
+                  >SEO e Google</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/5581985187208?text=Orçamento: Manutenção"
+                  target="_blank"
+                  >Manutenção mensal</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Navegação</h4>
+            <ul>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#portfolio">Portfólio</a></li>
+              <li><a href="#precos">Preços</a></li>
+              <li><a href="#contato">Contato</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contato</h4>
+            <p>agencia.clarti@gmail.com</p>
+            <p style="margin-top: 8px">(81) 98518-7208</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 ClarTI. Todos os direitos reservados.</p>
+          <p>Tecnologia com Clareza</p>
+        </div>
       </div>
     </footer>
 
-    <script src="scripts/main.js"></script>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-BYP4J9G5DN"
-    ></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
+      function toggleMenu() {
+        const h = document.getElementById("ham");
+        const n = document.getElementById("navLinks");
+        h.classList.toggle("open");
+        n.classList.toggle("open");
       }
-      gtag("js", new Date());
-
-      gtag("config", "G-BYP4J9G5DN");
+      function closeMenu() {
+        document.getElementById("ham").classList.remove("open");
+        document.getElementById("navLinks").classList.remove("open");
+      }
+      const ro = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+      document.querySelectorAll(".reveal").forEach((el) => ro.observe(el));
     </script>
   </body>
 </html>
