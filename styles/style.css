@@ -180,7 +180,7 @@ nav {
 .hero {
   position: relative;
   z-index: 1;
-  min-height: 100vh;
+  min-height: 85vh;
   display: flex;
   align-items: center;
   padding: 120px 56px 80px;
@@ -638,8 +638,8 @@ section {
   border-color: var(--border);
 }
 .port-thumb {
-  height: 180px;
-  background: var(--white);
+  height: 145px;
+  background: var(--bg2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -724,7 +724,7 @@ section {
   padding: 4px 10px;
   border-radius: 20px;
   display: inline-block;
-  margin-bottom: 12px;
+  margin-top: 24px;
 }
 .preco-card h3 {
   font-size: 1rem;
@@ -1005,7 +1005,7 @@ footer {
     display: flex;
   }
   .hero {
-    padding: 100px 24px 60px;
+    padding: 100px 24px 15px;
   }
   .hero-inner {
     grid-template-columns: 1fr;
@@ -1022,7 +1022,8 @@ footer {
     gap: 40px;
   }
   .stat-box {
-    flex-direction: row;
+    margin: 0 auto;
+    min-width: 80%;
     flex-wrap: wrap;
     gap: 20px;
   }
@@ -1046,6 +1047,9 @@ footer {
   }
   .cta-box {
     padding: 0 24px;
+  }
+  .problema, .servicos, .portfolio, .precos, .diferenciais, .cta-final {
+    padding: 60px 0;
   }
 }
 @media (max-width: 520px) {
